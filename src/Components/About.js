@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function About() {
   return (
-    <div className = "about-container">
+    <div  id = "about" className = "about-container">
     <div className="img-container">
 
       <img  className = "about-image"src = "https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
