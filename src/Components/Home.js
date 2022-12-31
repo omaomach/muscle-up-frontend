@@ -34,7 +34,7 @@ function Home() {
   //   fontWeight: 'bold',
   // }
   return (
-    <div>
+    <div >
       <div className="carousel">
 
         <Carousel
