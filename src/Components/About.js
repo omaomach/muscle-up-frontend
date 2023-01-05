@@ -5,7 +5,7 @@ export default function About() {
     <div  id = "about" className = "about-container">
     <div className="img-container">
 
-      <img  className = "about-image"src = "https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+      <img  className = "about-image"src = "https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt='about'/>
    </div>
    <div className="about-us">
       <h4>ABOUT US</h4><br/><br/>

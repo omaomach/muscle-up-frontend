@@ -1,0 +1,28 @@
+.services {
+    width: 100%;
+    height: 500px;
+    background-color: #ffffff;
+}
+
+.service-card {
+    width: 1800px;
+    height: 400px;
+    background-color: grey;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.card {
+    width: 220px;
+    height: 320px;
+    background-color: #EDA895;
+    border-radius: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+}

@@ -1,5 +1,7 @@
 import React from 'react'
 import About from './About'
+import Trainers from './Trainers';
+import Services from './Services'
 import { Carousel } from 'react-carousel-minimal';
 
 function Home() {
@@ -63,6 +65,14 @@ function Home() {
       <h2>About</h2>
 
         <About/>
+      </div>
+
+      <div className='services'>
+        <Services />
+      </div>
+
+      <div className='Trainers'>
+        <Trainers />
       </div>
 
     </div>
