@@ -17,3 +17,12 @@
     width: 100%;
     border-radius: 12px;
 }
+
+.carousel {
+    background-color: aqua;
+    height: 825px;
+    width: 1700px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
+}

@@ -225,9 +225,12 @@ ul{
 }
 
 /* about */
-.about{
-  margin-top: 100px;
-  margin-left: 300px;
+#about{
+  margin-top: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  /* margin-left: 300px; */
 }
      .about-image{
       height: 500px;
@@ -260,3 +263,11 @@ ul{
        font-family: Lato;
        font-size: 30px;
     }
+
+.second-parent {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+}

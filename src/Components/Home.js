@@ -3,6 +3,7 @@ import About from './About'
 import Trainers from './Trainers';
 import Services from './Services'
 import { Carousel } from 'react-carousel-minimal';
+import "./styles.css";
 
 function Home() {
   const data = [
@@ -41,9 +42,10 @@ function Home() {
 
         <Carousel
           data={data}
-          time={2000}
-          width="1850px"
-          height="650px"
+          time={3000}
+          width="1700px"
+          height="825px"
+          border-radius="12px"
           captionStyle={captionStyle}
 
           captionPosition="bottom"
@@ -57,13 +59,12 @@ function Home() {
             textAlign: "center",
             // width: "1000px",
             maxHeight: "500px",
+            borderRadius: "12px"
           }}
         />
 
       </div><br/><br/><br/><br/><br/>
       <div className='about'>
-      <h2>About</h2>
-
         <About/>
       </div>
 
