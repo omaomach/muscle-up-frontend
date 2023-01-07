@@ -1,0 +1,66 @@
+.navbar {
+    background-color: #001400;
+    height: 75px;
+    width: 1800px;
+    border-radius: 12px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    position: sticky;
+    top: 0px;
+    z-index: 99;
+    color: aliceblue;
+}
+
+.muscleup {
+    margin-left: 40px;
+}
+
+.muscleup h1{
+    font-style: italic;
+    font-family: 'Snell Roundhand, cursive';
+    color: aliceblue;
+}
+
+.nav-components {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 700px;
+    display: flex;
+    flex-direction: row;
+    font-style: italic;
+    font-family: 'Snell Roundhand, cursive';
+}
+
+.nav-components h4 {
+    text-decoration: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 25px;
+    font-size: larger;
+    color: aliceblue;
+}
+
+/* .nav-buttons {
+    width: 200px;
+    height: 35px;
+    border: 1px solid #000000;
+    background: #000000;
+    cursor: pointer;
+    color: #ffffff;
+    border-radius: 12px;
+    margin-right: 25px;
+    font-style: italic;
+    font-family: 'Snell Roundhand, cursive';
+} */
+
+.navbar a {
+    text-decoration: none;
+}
+
+.log-sign {
+    display: flex;
+    flex-direction: row;
+    margin-left: 265px;
+}

@@ -20,13 +20,13 @@ export default function Services() {
           <Item>
             <img src={boxing1} alt="boxing"/>
           </Item>
-          <Item>Two</Item>
-          <Item>Three</Item>
-          <Item>Four</Item>
-          <Item>Five</Item>
-          <Item>Six</Item>
-          <Item>Seven</Item>
-          <Item>Eight</Item>
+          <Item><img src={boxing1} alt="boxing"/></Item>
+          <Item><img src={boxing1} alt="boxing"/></Item>
+          <Item><img src={boxing1} alt="boxing"/></Item>
+          <Item><img src={boxing1} alt="boxing"/></Item>
+          <Item><img src={boxing1} alt="boxing"/></Item>
+          <Item><img src={boxing1} alt="boxing"/></Item>
+          <Item><img src={boxing1} alt="boxing"/></Item>
         </Carousel>
       </div>
     </div>

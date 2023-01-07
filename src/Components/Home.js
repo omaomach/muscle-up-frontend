@@ -17,10 +17,12 @@ function Home() {
     },
     {
       image: "https://images.pexels.com/photos/3253501/pexels-photo-3253501.jpeg?auto=compress&cs=tinysrgb&w=1600",
+
       // caption: "Darjeeling"
     },
     {
-      image: "https://images.pexels.com/photos/13583539/pexels-photo-13583539.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      image: "https://as1.ftcdn.net/v2/jpg/03/20/45/94/1000_F_320459487_SAvrvfR4NN4CkFQccj49rBfmiLoYebuw.jpg",
+      caption: "Being weak is nothing to be ashamed of, staying weak is"
       // caption: "San Francisco"
     },
 
