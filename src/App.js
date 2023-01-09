@@ -9,11 +9,12 @@ import Trainers from './Components/Trainers';
 import Contacts from './Components/Contacts';
 import SignUp from './Components/SignUp';
 import Login from './Components/Login';
+import Dashboard from './Components/Dashboard';
 function App() {
   return (
     <div className="App">
       <div>
-        <Router>
+        {/* <Router>
           <NavBar />
           <Routes>
             <Route exact path="/" element={<Home />}></Route>
@@ -24,7 +25,8 @@ function App() {
             <Route path="/login" element={<Login />} ></Route>
             <Route path="/signup" element={<SignUp />} ></Route>
           </Routes>
-        </Router>
+        </Router> */}
+        <Dashboard/>
       </div>
     </div>
   );
