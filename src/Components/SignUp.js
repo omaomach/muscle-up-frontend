@@ -8,15 +8,19 @@ import Details from "./steps/Details";
 import Payment from "./steps/Payment";
 import Final from "./steps/Final";
 import './SignUp.css'
+import Trainer from "./steps/Trainer";
+import Diet from "./steps/Diet";
 
 function SignUp() {
   const [currentStep, setCurrentStep] = useState(1);
 
   const steps = [
-    "Account Information",
-    "Personal Details",
+    "User Information",
+    "User Stats",
+    "Trainer",
+    "Diet",
     "Payment",
-    "Complete",
+    "Complete"
   ];
 
   const displayStep = (step) => {
@@ -26,8 +30,12 @@ function SignUp() {
       case 2:
         return <Details />;
       case 3:
-        return <Payment />;
+        return <Trainer />;
       case 4:
+        return <Diet />;
+      case 5:
+        return <Payment />;
+      case 6:
         return <Final />;
       default:
     }
