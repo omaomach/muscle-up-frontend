@@ -1,6 +1,8 @@
 .dashboard{
     display: flex;
     width:100%;
+    background-color: rgb(244, 243, 243);
+
 }
 
 
@@ -10,8 +12,8 @@
     flex-direction: column;
 }
 .client-img{
-    height:280px;
-    width: 280px;
+    height:200px;
+    width: 200px;
     border-radius: 1000px;
     
 }
@@ -31,7 +33,7 @@
     display:flex;
     justify-content: space-between;
     list-style: none;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     color: black;
     font-size: x-large;
     margin:5% 10%;
@@ -45,8 +47,8 @@
     flex-direction: column;
     
     width: 48%;
-    height: 62.5vh;
-    background-color: antiquewhite; opacity:0.75;
+    height: 70.5vh;
+    background-color:#c0c3c2; opacity:0.75;
     margin-left: 1%;
     margin-right: 1%;
     border-radius: 5px;
@@ -65,7 +67,7 @@
 }
 .diet-bar{
     width:48%;
-    background-color: antiquewhite; opacity:0.75;
+    background-color:#c0c3c2; opacity:0.75;
     margin-left: 1%;
     margin-right: 1%;
     border-radius: 5px;
@@ -73,10 +75,12 @@
 
     
 }
-/* .about-client{
-    margin-left: 200px;
-    width: 500px;
-}
+ .about-client{
+   color: black;
+   text-align: justify;
+   width: 40%;
+
+} 
 .header{
     margin-left: 500px;
-} */
+} 

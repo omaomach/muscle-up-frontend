@@ -6,14 +6,12 @@ function Login() {
       <h1 className='login-title'> Log In Here!</h1>
 
       <form className='form'>
-        {/* <label htmlFor="text">Username:</label> */}
 
         <input
         placeholder='Username'
           type="text"
 
         />
-        {/* <label htmlFor="password">Password:</label> */}
 
         <input
         placeholder='Password'
