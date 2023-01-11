@@ -1,6 +1,5 @@
 import React from 'react'
 import "./Dashnav.css"
-
 const Dashnav = () => {
   return (
     <div className='sidebar'>
@@ -9,13 +8,11 @@ const Dashnav = () => {
         </div>
         <div className="links">
             <ul>
-              <li><a href=''>Dashboard</a></li>
-              <li><a href=''>Logout</a></li>
+              <li className='nav-link'><a href=''>Dashboard</a></li>
+              <li className='nav-link'><a href=''>Logout</a></li>
             </ul>
         </div>
-
     </div>
   )
 }
-
 export default Dashnav

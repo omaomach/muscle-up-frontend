@@ -1,86 +1,167 @@
 .dashboard{
     display: flex;
-    width:100%;
-    background-color: rgb(244, 243, 243);
-
+    background-color: white;
+    color: black;
 }
-
-
 .client-details{
     width: 82%;
     display: flex;
     flex-direction: column;
 }
 .client-img{
+    margin-top: 20px;
     height:200px;
     width: 200px;
     border-radius: 1000px;
-    
+    animation: bounceInLeft;
+    animation-duration: 2s;
 }
 .client{
     display:flex;
     width:100%;
-    
-    
 }
 .dash-img{
     width:40%;
 }
 .dash-about{
     width: 60%;
+    height: 150px;
+    animation: bounceInLeft;
+    animation-duration: 2s;
 }
 .client-status{
     display:flex;
     justify-content: space-between;
     list-style: none;
-    /* background-color: antiquewhite; */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    border-radius: 8px;
+    text-align: center;
     color: black;
     font-size: x-large;
     margin:5% 10%;
-    
-    
-} 
-
-
+    height: 60px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+.status-heading{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: black;
+    font-size: x-large;
+    margin:5% 10%;
+    height: 40px;
+    font-weight: 700;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
 .stats{
     display: flex;
     flex-direction: column;
-    
-    width: 48%;
-    height: 70.5vh;
-    background-color:#c0c3c2; opacity:0.75;
+    width: 35%;
+    height: 80.5vh;
+    background-color:#EDEFF1 ;
     margin-left: 1%;
     margin-right: 1%;
     border-radius: 5px;
-
+    animation: bounceInLeft;
+    animation-duration: 2s;
 }
 .payment{
     color:black;
     font-size: x-large;
     text-align: start;
-    margin-left: 10%;
-
+    width: 360px;
+    padding-left: 20px;
+    /* padding-right: 20px; */
+    border-radius: 8px;
+    margin: 5% 10%;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 .details-container{
     display: flex;
     width: 100%;
 }
+.header{
+    animation: bounceInLeft;
+    animation-duration: 2s;
+}
 .diet-bar{
-    width:48%;
-    background-color:#c0c3c2; opacity:0.75;
+    width:65%;
+    background-color:#EDEFF1 ;
     margin-left: 1%;
     margin-right: 1%;
     border-radius: 5px;
-
-
-    
+    animation: bounceInLeft;
+    animation-duration: 2s;
 }
  .about-client{
    color: black;
    text-align: justify;
-   width: 40%;
+   width: 60%;
+   font-size: 20px;
+}
+.h2{
+    color: #173B3F;
+    text-align: justify;
+}
+.img{
+    width: 300px;
+    height: 350px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+.exercise{
+    display: flex;
+    flex-direction: row;
+    margin: 30px;
+}
+.diet{
+    width: 50%;
+    margin-left: 100px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+.todays{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  width: 50%;
+  height: 60vh;
+}
+.sidebar{
+    width: 18%;
+min-height: 100vh;  /* background-color: #1E554F; */
+  background-color: #173B3F;
+  ;
+}
+.links{
+  font-size: 35px;
+  font-weight: 600;
+  margin-right: 20px;
+  margin-top: 50px;
+}
+a:link {
+  text-decoration: none;
+}
+.nav-link{  /* padding: 10px 15px 10px 15px; */
+  font-family: 'Sofia', sans-serif;
+  color: white;
+  font-size: 22px;
+  opacity: 75%;
+  background-image: linear-gradient(
+  to right,
+  black,
+  black 50%,
+  white 50%
+  );
+  background-size: 200% 100%;
+  background-position: 100%;
+  display:inline-block;
+  padding: 20px 0;
 
-} 
-.header{
-    margin-left: 500px;
-} 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+.logo{
+  color: white;
+}
