@@ -1,5 +1,6 @@
 import React from 'react'
 import { useStepperContext } from "../../contexts/StepperContext";
+import './Account.css'
 
 export default function Account() {
   const { userData, setUserData } = useStepperContext();
@@ -10,43 +11,35 @@ export default function Account() {
   };
 
   return (
-    <div className="flex flex-col ">
+    <div className="user-info">
+        <h2>Sign Up to access muscleUp</h2>
       <div className="mx-2 w-full flex-1">
-        <div className="mt-3 h-6 text-xs font-bold uppercase leading-8 text-gray-500">
-          Username
-        </div>
-        <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
+        <div className="individual-input-div">
           <input
             onChange={handleChange}
             value={userData["username"] || ""}
             name="username"
             placeholder="Username"
-            className="w-full appearance-none p-1 px-2 text-gray-800 outline-none"
+            // className="w-full appearance-none p-1 px-2 text-gray-800 outline-none"
           />
         </div>
       </div>
 
       <div className="mx-2 w-full flex-1">
-        <div className="mt-3 h-6 text-xs font-bold uppercase leading-8 text-gray-500">
-          Email
-        </div>
-        <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
+        <div className="individual-input-div">
           <input
             onChange={handleChange}
             value={userData["email"] || ""}
             name="email"
             placeholder="Email"
             type="email"
-            className="w-full appearance-none p-1 px-2 text-gray-800 outline-none"
+            // className="w-full appearance-none p-1 px-2 text-gray-800 outline-none"
           />
         </div>
       </div>
 
       <div className="mx-2 w-full flex-1">
-        <div className="mt-3 h-6 text-xs font-bold uppercase leading-8 text-gray-500">
-          Phone Number
-        </div>
-        <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
+        <div className="individual-input-div">
           <input
             onChange={handleChange}
             value={userData["phone"] || ""}
@@ -59,10 +52,7 @@ export default function Account() {
       </div>
 
       <div className="mx-2 w-full flex-1">
-        <div className="mt-3 h-6 text-xs font-bold uppercase leading-8 text-gray-500">
-          Password
-        </div>
-        <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
+        <div className="individual-input-div">
           <input
             onChange={handleChange}
             value={userData["password"] || ""}
@@ -75,10 +65,7 @@ export default function Account() {
       </div>
 
       <div className="mx-2 w-full flex-1">
-        <div className="mt-3 h-6 text-xs font-bold uppercase leading-8 text-gray-500">
-          Password Confirmation
-        </div>
-        <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
+        <div className="individual-input-div">
           <input
             onChange={handleChange}
             value={userData["password-confirmation"] || ""}
