@@ -19,12 +19,14 @@ import { Link } from 'react-router-dom';
         id="email"
       
       />
-       <input
+         <input
       placeholder='Phone Number'
         type="number"
         id="phone_number"
       
       />
+      
+    
       <input
       placeholder='Password'
         type="password"

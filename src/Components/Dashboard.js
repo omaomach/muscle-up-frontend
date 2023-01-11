@@ -1,8 +1,7 @@
 import React from "react";
 import "./Dashboard.css";
 import Dashnav from "./Dashnav";
-import Calendar from "./Calender";
-
+import Time from "./Time";
 const Dashboard = () => {
   return (
     <div className="dashboard">
@@ -21,9 +20,7 @@ const Dashboard = () => {
               {" "}
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam,
-              <br />
-              <br /> quis nostrud exercitation ullamco ."
+              enim ad minim veniam,quis nostrud exercitation ullamco ."
             </p>
           </div>
         </div>
@@ -40,7 +37,9 @@ const Dashboard = () => {
               <p>Payment:</p>
               
             </div>
-            
+            <div>
+              <Time/>
+            </div>
           </div>
           <div className="diet-bar">
             <h1>msmmsmms</h1>
