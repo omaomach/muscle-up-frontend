@@ -9,7 +9,8 @@ import Trainers from './Components/Trainers';
 import Contacts from './Components/Contacts';
 import SignUp from './Components/SignUp';
 import Login from './Components/Login';
-// import Dashboard from './Components/Dashboard';
+import Dashboard from './Components/Dashboard';
+import Admin from './Components/admin/Admin';
 function App() {
   return (
     <div className="App">
@@ -27,6 +28,8 @@ function App() {
           </Routes>
         </Router>
         {/* <Dashboard/> */}
+        <Admin/>
+
       </div>
     </div>
   );
