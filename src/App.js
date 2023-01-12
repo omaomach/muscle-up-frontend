@@ -10,6 +10,7 @@ import Contacts from './Components/Contacts';
 import SignUp from './Components/SignUp';
 import Login from './Components/Login';
 import Dashboard from './Components/Dashboard';
+import Admin from './Components/admin/Admin';
 function App() {
   return (
     <div className="App">
@@ -26,7 +27,9 @@ function App() {
             <Route path="/signup" element={<SignUp />} ></Route>
           </Routes>
         </Router> */}
-        <Dashboard/>
+        {/* <Dashboard/> */}
+        <Admin/>
+
       </div>
     </div>
   );

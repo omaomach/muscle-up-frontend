@@ -32,6 +32,15 @@
     font-style: italic;
     font-family: 'Snell Roundhand, cursive';
 }
+.nav-component {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 700px;
+    display: flex;
+    flex-direction: row;
+    font-style: italic;
+    font-family: 'Snell Roundhand, cursive';
+}
 
 .nav-components h4 {
     text-decoration: none;
