@@ -6,8 +6,11 @@ export default function Details() {
   const { userData, setUserData } = useStepperContext();
 
   function modifyDetailsInfo(e) {
-    setUserData(userData=> ({...userData, step2: {...userData.step2, [e.target.id]: e.target.value}}))
-    console.log(userData)
+    setUserData(userData=> {
+      const newUserData = {...userData, step2: {...userData.step2, [e.target.id]: e.target.value}}
+      console.log(newUserData)
+      return newUserData
+    })
   }
 
   function goToSecondStep(e) {
@@ -76,11 +79,11 @@ export default function Details() {
 
       <div className="w-full mx-2 flex-1">
         <div className="individual-input-div">
-          <select className='level-dropdown' onChange={modifyDetailsInfo} defaultValue={userData.step2.level}>
+          <select id='level' className='level-dropdown' onClick={modifyDetailsInfo} defaultValue={userData.step2.level}>
             <option value={0}>Select Training Level</option>
-            <option>Beginner</option>
-            <option>Intermediate</option>
-            <option>Expert</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Expert">Expert</option>
           </select>
         </div>
       </div>
