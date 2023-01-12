@@ -1,23 +1,38 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { useStepperContext } from "../../contexts/StepperContext";
 import './Account.css'
+// import { useNavigate } from 'react-router-dom';
+
 
 export default function Account() {
   const { userData, setUserData } = useStepperContext();
+  // const [userData.step1, setuserData.step1] = useState({
+  //   username: "",
+  //   phone_number: "",
+  //   email: "",
+  //   password: "",
+  //   password_confirmation: ""
+  // });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setUserData({ ...userData, [name]: value });
-  };
+  function modifyAccountInfo(e) {
+    setUserData(userData=> ({...userData, step1: {...userData.step1, [e.target.id]: e.target.value}}))
+    console.log(userData)
+  }
+
+  function goToNextStep(e) {
+    e.preventDefault()
+  }
 
   return (
     <div className="user-info">
         <h2>Sign Up to access muscleUp</h2>
+      <form onSubmit={goToNextStep}>
       <div className="mx-2 w-full flex-1">
         <div className="individual-input-div">
           <input
-            onChange={handleChange}
-            value={userData["username"] || ""}
+            id='username'
+            onChange={modifyAccountInfo}
+            value={userData.step1.username}
             name="username"
             placeholder="Username"
             // className="w-full appearance-none p-1 px-2 text-gray-800 outline-none"
@@ -28,8 +43,9 @@ export default function Account() {
       <div className="mx-2 w-full flex-1">
         <div className="individual-input-div">
           <input
-            onChange={handleChange}
-            value={userData["email"] || ""}
+            id="email"
+            onChange={modifyAccountInfo}
+            value={userData.step1.email}
             name="email"
             placeholder="Email"
             type="email"
@@ -41,8 +57,9 @@ export default function Account() {
       <div className="mx-2 w-full flex-1">
         <div className="individual-input-div">
           <input
-            onChange={handleChange}
-            value={userData["phone"] || ""}
+            id="phone_number"
+            onChange={modifyAccountInfo}
+            value={userData.step1.phone_number}
             name="phone"
             placeholder="Phone Number"
             type="number"
@@ -54,8 +71,9 @@ export default function Account() {
       <div className="mx-2 w-full flex-1">
         <div className="individual-input-div">
           <input
-            onChange={handleChange}
-            value={userData["password"] || ""}
+            id='password'
+            onChange={modifyAccountInfo}
+            value={userData.step1.password}
             name="password"
             placeholder="Password"
             type="password"
@@ -67,8 +85,9 @@ export default function Account() {
       <div className="mx-2 w-full flex-1">
         <div className="individual-input-div">
           <input
-            onChange={handleChange}
-            value={userData["password-confirmation"] || ""}
+            id='password_confirmation'
+            onChange={modifyAccountInfo}
+            value={userData.step1.password_confirmation}
             name="password-confirmation"
             placeholder="Password Confirmation"
             type="password"
@@ -76,7 +95,8 @@ export default function Account() {
           />
         </div>
       </div>
+      </form>
 
     </div>
   );
-}
+  }
