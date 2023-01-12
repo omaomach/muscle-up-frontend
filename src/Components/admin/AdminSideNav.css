@@ -1,22 +1,34 @@
-.admin-img{
-    margin-top: 20px;
-    height:200px;
-    width: 200px;
-    margin-left: 70px;
-    border-radius: 1000px;
+.admin-sidebar {
+    width: 100%;
+    min-height: 100vh;
+    /* background-color: #1E554F; */
+    background-color: #173B3F;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
-.admin-sidebar{
-    width: 100%;
-min-height: 100vh;  /* background-color: #1E554F; */
-  background-color: #173B3F;
-  
+
+.admin-img {
+    margin-top: 20px;
+    height: 200px;
+    width: 200px;
+    /* margin-left: 70px; */
+    border-radius: 1000px;
+
+
 }
-.admin-btn{
+
+.admin-sidebar h2 {
+    color: #fafafa;
+}
+
+.admin-btn {
     margin: 10px;
     width: 120px;
-    margin-top: 100px;
-    margin-left: 90px;
+    margin-top: 40px;
+    /* margin-left: 90px; */
     padding: 15px 30px;
     text-align: center;
     transition: 0.5s;
@@ -24,7 +36,7 @@ min-height: 100vh;  /* background-color: #1E554F; */
     border-radius: 8px;
     display: block;
     border: 0px;
-    background-color: #80817f;
+    background-color: #56C870;
     font-weight: 700;
     font-size: 20px;
     box-shadow: 0px 0px 14px -7px #98a797;
@@ -33,4 +45,62 @@ min-height: 100vh;  /* background-color: #1E554F; */
     -webkit-user-select: none;
     touch-action: manipulation;
     text-decoration: none;
+}
+
+.cli {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 20px;
+    color: #fafafa;
+    margin: 0;
+    align-items: center;
+    
+
+}
+
+.cli ul li {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.adm-links {
+    
+    color: #fafafa;
+    align-self: center;
+    font-size: 23px;
+    
+    
+    position: relative;
+    background-color: #173B3F;
+    margin-top: 20px;
+    
+}
+
+  
+  .adm-links::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      border-radius: 4px;
+      background-color: #56C870;
+      bottom: 0;
+      left: 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform .3s ease-in-out;
     }
+  
+  .adm-links:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+span{
+    font-weight: 100;
+}
+h2{
+    
+}

@@ -1,0 +1,32 @@
+.table{
+    width: 100%;
+    min-height:100%;
+}
+table{
+    width:96%;
+    margin:2% 2%;
+    border: none;
+
+    
+    
+
+}
+.head{
+    
+    background-color:#56C870 ;
+    margin: 0;
+    padding-top:20px;
+    font-size: 25px;
+    color: #fafafa;
+    
+    
+}
+tbody{
+    background-color: #EDEFF1;
+    font-size: 20px;
+}
+.avatar{
+    height:7vh;
+    width: 50%;
+    border-radius: 1000px;
+}
