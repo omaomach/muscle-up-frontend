@@ -17,18 +17,10 @@ export default function Admin() {
         <AdminSideNav/>
         </div>
         <div className='navbar-admin'>
-    <Router>
-          <NavBaradmin />
-          <Routes>
-            <Route exact path="/client" element={<Client />}></Route>           
-            <Route path="/equipment" element={< Equipment/>} ></Route>
-            <Route path="/trainers" element={< Trainers/>} ></Route>
-
-          </Routes>
-        </Router>
+  
+<NavBaradmin/>
 
 </div>
-
     </div>
   )
 }

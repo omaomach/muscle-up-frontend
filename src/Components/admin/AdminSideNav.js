@@ -5,7 +5,7 @@ import "./AdminSideNav.css";
 
 const AdminSidenav  = () => {
   return (
-    <div className='sidebar'>
+    <div className='admin-sidebar'>
         <div className='logo'>
           <h1>Muscle up</h1>
         </div>
