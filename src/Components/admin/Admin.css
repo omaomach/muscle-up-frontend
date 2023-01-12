@@ -1,0 +1,29 @@
+/* .buttons{
+    position: relative;
+} */
+.admin-container{
+    display: flex;
+    background-color: white;
+    color: black;
+}
+
+.navbar-admin{
+        background-color: #cbd9cb;
+        height: 95px;
+        width: 1000px;
+        border-radius: 12px;
+        margin-top: 10px;
+        margin-right: 500px;
+        display: flex;
+        flex-direction: row;
+        margin-left: 400px;
+        /* position: sticky; */
+        top: 0px;
+        z-index: 99;
+    }
+   .nav-links{
+    color: rgb(7, 7, 7);
+    text-align: center;
+    /* padding: 5px 5px; */
+    text-decoration: none;
+   }
