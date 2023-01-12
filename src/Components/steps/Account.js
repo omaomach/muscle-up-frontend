@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import { useStepperContext } from "../../contexts/StepperContext";
 import './Account.css'
 // import { useNavigate } from 'react-router-dom';
@@ -13,6 +13,12 @@ export default function Account() {
   //   password: "",
   //   password_confirmation: ""
   // });
+
+  // console.log(userData)
+
+  useEffect(() => {
+    console.log(userData)
+  })
 
   function modifyAccountInfo(e) {
     setUserData(userData=> ({...userData, step1: {...userData.step1, [e.target.id]: e.target.value}}))

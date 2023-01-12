@@ -1,22 +1,29 @@
 import React from 'react'
 import { useStepperContext } from "../../contexts/StepperContext"
-import './Account.css'
+import './Account'
 
 export default function Details() {
   const { userData, setUserData } = useStepperContext();
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setUserData({ ...userData, [name]: value });
-  };
+  function modifyDetailsInfo(e) {
+    setUserData(userData=> ({...userData, step2: {...userData.step2, [e.target.id]: e.target.value}}))
+    console.log(userData)
+  }
+
+  function goToSecondStep(e) {
+    e.preventDefault()
+  }
+  
   return (
     <div className="user-info"> 
       <h2>Please provide your stats to proceed</h2>
+      <form onSubmit={goToSecondStep}>
       <div className="w-full mx-2 flex-1">
         <div className="individual-input-div">
           <input
-            onChange={handleChange}
-            value={userData["avatar"] || ""}
+            id='profile_image'
+            onChange={modifyDetailsInfo}
+            value={userData.step2.profile_image}
             name="avatar"
             placeholder="Profile Image"
             type="text"
@@ -28,8 +35,9 @@ export default function Details() {
       <div className="w-full mx-2 flex-1">
         <div className="individual-input-div">
           <input
-            onChange={handleChange}
-            value={userData["age"] || ""}
+            id='age'
+            onChange={modifyDetailsInfo}
+            value={userData.step2.age}
             name="age"
             placeholder="age"
             type="number"
@@ -41,8 +49,9 @@ export default function Details() {
       <div className="w-full mx-2 flex-1">
         <div className="individual-input-div">
           <input
-            onChange={handleChange}
-            value={userData["weight"] || ""}
+            id='weight'
+            onChange={modifyDetailsInfo}
+            value={userData.step2.weight}
             name="weight"
             placeholder="Weight"
             type="number"
@@ -54,8 +63,9 @@ export default function Details() {
       <div className="w-full mx-2 flex-1">
         <div className="individual-input-div">
           <input
-            onChange={handleChange}
-            value={userData["target-weight"] || ""}
+            id='target_weight'
+            onChange={modifyDetailsInfo}
+            value={userData.step2.target_weight}
             name="target-weight"
             placeholder="Target Weight"
             type="number"
@@ -66,16 +76,16 @@ export default function Details() {
 
       <div className="w-full mx-2 flex-1">
         <div className="individual-input-div">
-          <input
-            onChange={handleChange}
-            value={userData["Level"] || ""}
-            name="level"
-            placeholder="Level"
-            type="text"
-            className="p-1 px-2 appearance-none outline-none w-full text-gray-800"
-          />
+          <select className='level-dropdown' onChange={modifyDetailsInfo} defaultValue={userData.step2.level}>
+            <option value={0}>Select Training Level</option>
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Expert</option>
+          </select>
         </div>
       </div>
+      </form>
+
     </div>
   );
 }

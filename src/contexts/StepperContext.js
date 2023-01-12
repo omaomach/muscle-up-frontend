@@ -3,13 +3,21 @@ import React, { createContext, useContext, useState } from "react";
 const StepperContext = createContext({ userData: "", setUserData: null });
 
 export function UseContextProvider({ children }) {
-  const [userData, setUserData] = useState({step1: {
+  const [userData, setUserData] = useState({
+  step1: {
     username: "",
     phone_number: "",
     email: "",
     password: "",
     password_confirmation: ""
-  }, step2: {}, step3: {}});
+  }, 
+  step2: {
+    profile_image: "",
+    age: "",
+    weight: "",
+    target_weight: "",
+    level: ""
+  }, step3: {}});
 
   return (
     <StepperContext.Provider value={{ userData, setUserData }}>
