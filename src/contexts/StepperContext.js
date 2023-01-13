@@ -17,7 +17,17 @@ export function UseContextProvider({ children }) {
     weight: "",
     target_weight: "",
     level: ""
-  }, step3: {}});
+  }, 
+  step3: {
+    
+  }, 
+  step4: {
+    diet_type: ""
+  }, 
+  step5: {
+    credit_card: "",
+    date: ""
+  }});
 
   return (
     <StepperContext.Provider value={{ userData, setUserData }}>

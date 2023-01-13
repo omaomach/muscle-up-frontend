@@ -5,12 +5,16 @@ import './Account'
 export default function Details() {
   const { userData, setUserData } = useStepperContext();
 
+  // function modifyDetailsInfo(e) {
+  //   setUserData(userData=> {
+  //     const newUserData = {...userData, step2: {...userData.step2, [e.target.id]: e.target.value}}
+  //     console.log(newUserData)
+  //     return newUserData
+  //   })
+  // }
+
   function modifyDetailsInfo(e) {
-    setUserData(userData=> {
-      const newUserData = {...userData, step2: {...userData.step2, [e.target.id]: e.target.value}}
-      console.log(newUserData)
-      return newUserData
-    })
+    setUserData(userData=> ({...userData, step2: {...userData.step2, [e.target.id]: e.target.value}}))
   }
 
   function goToSecondStep(e) {
