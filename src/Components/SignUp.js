@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Stepper from "./Stepper";
 import StepperControl from "./StepperControl";
-import { UseContextProvider } from "../contexts/StepperContext";
+import { UseContextProvider, useStepperContext } from "../contexts/StepperContext";
 
 import Account from "./steps/Account";
 import Details from "./steps/Details";
@@ -13,6 +13,25 @@ import Diet from "./steps/Diet";
 
 function SignUp() {
   const [currentStep, setCurrentStep] = useState(1);
+  const { userData, setUserData } = useStepperContext();
+
+  console.log("Vincent")
+  function handleSubmit(e) {
+    // e.preventDefault();
+    fetch("http://127.0.0.1:3000/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        userData
+      }),
+    })
+      .then((r) => r.json())
+      .then(console.log);
+
+  }
 
   const steps = [
     "User Information",
@@ -65,7 +84,9 @@ function SignUp() {
         <StepperControl
           handleClick={handleClick}
           currentStep={currentStep}
+          setCurrentStep={setCurrentStep}
           steps={steps}
+          handleSubmit={handleSubmit}
         />
       )}
     </div>
