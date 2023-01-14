@@ -8,11 +8,11 @@ function NavBar() {
     
     <div className='navbar'>
       <div className='muscleup'>
-        <HashLink to="/"><h1>muscleUp</h1></HashLink>
+        <h1>muscleUp</h1>
       </div>
 
       <div className='nav-components'>
-          <HashLink style={{ textDecoration: 'none' }} smooth to="/"><h4>Home</h4></HashLink>
+          <HashLink style={{ textDecoration: 'none' }} smooth to="/#"><h4>Home</h4></HashLink>
           <HashLink style={{ textDecoration: 'none' }} smooth to="/#about"><h4>About</h4></HashLink>
           <HashLink style={{ textDecoration: 'none' }} smooth to="/#services"><h4>Services</h4></HashLink>
           <HashLink style={{ textDecoration: 'none' }}  smooth to="/#trainers"><h4>Trainers</h4></HashLink>

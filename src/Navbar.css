@@ -1,23 +1,23 @@
 .navbar {
-    background-color: #001400;
-    height: 75px;
-    width: 1800px;
-    border-radius: 12px;
+    background-color: #173B3F;
+text-align: center;
+    height: 90px;
+    width: 100%;
     margin-top: 10px;
     display: flex;
     flex-direction: row;
-    margin-left: 20px;
     position: sticky;
     top: 0px;
     z-index: 99;
-    color: aliceblue;
+    color: rgb(254, 254, 254);
 }
 
 .muscleup {
-    margin-left: 40px;
+    margin-left: 50px;
 }
 
 .muscleup h1{
+    margin-top: 15px;
     font-style: italic;
     font-family: 'Snell Roundhand, cursive';
     color: aliceblue;

@@ -23,7 +23,6 @@ function Home() {
     {
       image: "https://as1.ftcdn.net/v2/jpg/03/20/45/94/1000_F_320459487_SAvrvfR4NN4CkFQccj49rBfmiLoYebuw.jpg",
       caption: "Being weak is nothing to be ashamed of, staying weak is"
-      // caption: "San Francisco"
     },
 
 
@@ -33,11 +32,9 @@ function Home() {
   const captionStyle = {
     fontSize: '2em',
     fontWeight: 'bold',
+    fontStyle: 'italic'
   }
-  // const slideNumberStyle = {
-  //   fontSize: '20px',
-  //   fontWeight: 'bold',
-  // }
+
   return (
     <div >
       <div className="carousel">
@@ -46,16 +43,15 @@ function Home() {
           data={data}
           time={3000}
           width="1700px"
-          height="825px"
+          height="800px"
           border-radius="12px"
           captionStyle={captionStyle}
-
           captionPosition="bottom"
           automatic={true}
           dots={true}
           pauseIconColor="white"
           pauseIconSize="40px"
-          slideBackgroundColor="darkgrey"
+          slideBackgroundColor="black"
 
           style={{
             textAlign: "center",
@@ -65,15 +61,14 @@ function Home() {
           }}
         />
 
-      </div><br/><br/><br/><br/><br/>
+      </div><br /><br /><br /><br /><br />
       <div className='about'>
-        <About/>
+        <About />
       </div>
 
       <div className='services'>
         <Services />
       </div>
-
       <div className='Trainers'>
         <Trainers />
       </div>

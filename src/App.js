@@ -28,7 +28,7 @@ function App() {
           </Routes>
         </Router>
         {/* <Dashboard/> */}
-        <Admin/>
+        {/* <Admin/> */}
 
       </div>
     </div>
