@@ -78,24 +78,25 @@ ul {
   z-index: 1;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 20px;
-  margin-left: 10px;
 }
 
 /* login page */
 .login-form-box {
   top: 150px;
-  display: block;
-  left: 500px;
+  display: flex;
+  margin-left: 35%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #adb4ba;
+
   flex-direction: column;
   justify-content: center;
-  width: 30px;
-  min-width: 27%;
-  height: 300px;
-  margin: 10px;
+  align-items: center;
+  width: 30%;
+  height: 60vh;
   padding: 5vw;
-  position: relative;
-  background-color: rgba(87, 127, 89, 0.5);
-  opacity: 90%;
+  background-color: #ebf0ed;
 }
 
 .login-form-box label {
@@ -105,19 +106,25 @@ ul {
   font-family: 'Sofia', sans-serif;
   font-size: x-large;
   color: rgb(12, 12, 12);
-  margin: 0 0 2vh 0;
+  /* margin: 0 0 2vh 0; */
+}
+.form{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
-.text-area {
-  width: 10px;
-}
+
 
 .login-form-box input,
 textarea {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
   color: #000;
   width: 100%;
+  align-items: center;
   padding: .5rem .8rem .5rem .8rem;
   margin: .9vw 0;
   border: 0.5;
@@ -127,21 +134,20 @@ textarea {
   font-family: 'Sofia', sans-serif;
 }
 
-.login-button {
-  margin: 10px;
-  width: 90px;
-  margin-left: 90px;
-  padding: 15px 30px;
+form .login-btn {
+  /* margin: 10px; */
+  width: 120px;
+  margin-top: 10px;
+  /* margin-left: 90px; */
+  padding: 10px 15px;
   text-align: center;
   transition: 0.5s;
-  background-size: 200% auto;
-  color: rgb(177, 252, 216);
+  color: rgb(6, 6, 6);
   border-radius: 8px;
-  display: block;
-  border: 0px;
+  background-color: #56C870;
   font-weight: 700;
-  box-shadow: 0px 0px 14px -7px #98a797;
-  background-image: linear-gradient(45deg, #034d05 0%, #4e6a02 51%, #f8f0ee 100%);
+  font-size: 20px;
+  /* box-shadow: 0px 0px 14px -7px #98a797; */
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
@@ -151,22 +157,14 @@ textarea {
 
 .login-title {
   text-align: center;
-  margin: 15px;
   margin-top: 10px;
   opacity: 90%;
   text-align: center;
   font-family: 'Bad Script', cursive;
   font-size: 40px;
-  color: #ebf0ed;
+  color: #326c3f;
 }
 
-.form {
-  text-align: center;
-  padding-top: 30px;
-  width: 300px;
-  padding-left: 100px;
-
-}
 
 /* signupform */
 .signup-form-box {
@@ -221,46 +219,24 @@ textarea {
   height: 15vh;
 }
 
-.signup-button {
-  margin-left: 100px;
-  padding: 15px 30px;
+
+
+.signup-btn {
+  width: 120px;
+  margin-top: 10px;
+  padding: 15px 15px;
   text-align: center;
-  font-size: 20px;
-  text-transform: uppercase;
   transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  border-radius: 10px;
+  color: #326c3f;
+  border-radius: 8px;
   display: block;
   border: 0px;
   font-weight: 700;
-  box-shadow: 0px 0px 14px -7px #125722;
-  background-image: linear-gradient(45deg, #056306 0%, #4e6a02 51%, #f8f0ee 100%);
+  font-size: 20px;
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-
-}
-
-.link {
-  width: 100px;
-  margin-left: 160px;
-  padding: 15px 30px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  border-radius: 10px;
-  display: block;
-  border: 0px;
-  font-weight: 700;
-  box-shadow: 0px 0px 14px -7px #125722;
-  background-image: linear-gradient(45deg, #056306 0%, #4e6a02 51%, #f8f0ee 100%);
-  cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
   text-decoration: none;
 }
 
@@ -307,7 +283,7 @@ textarea {
   font-size: 25px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  color: black;
+  color: #fafafa;
   /* margin-top: 10vh;
   margin-bottom: 5vh; */
 
