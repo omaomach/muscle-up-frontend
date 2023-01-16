@@ -2,7 +2,7 @@
     background-color: #173B3F;
     height: 75px;
     width: 100%;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     display: flex;
     font-size: 18px;
     text-align: center;
@@ -12,13 +12,13 @@
     z-index: 99;
 }
 
-.muscleup {
+/* .muscleup {
     margin-left: 40px;
-}
+} */
 
 .muscleup h1{
-    font-style: italic;
-    font-family: 'Snell Roundhand, cursive';
+    font-size: 35px;
+    
     color: #fafafa;
 
 }
@@ -29,8 +29,7 @@
     margin-left: 700px;
     display: flex;
     flex-direction: row;
-    font-style: italic;
-    font-family: 'Snell Roundhand, cursive';
+   
 }
 .nav-component {
     margin-top: auto;
@@ -38,8 +37,7 @@
     margin-left: 700px;
     display: flex;
     flex-direction: row;
-    font-style: italic;
-    font-family: 'Snell Roundhand, cursive';
+ 
 }
 
 .nav-components h4 {
@@ -51,7 +49,8 @@
     color: #fafafa;
 }
 
-/* .hme::before {
+
+ /* h4::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -65,7 +64,7 @@
     transition: transform .3s ease-in-out;
   }
 
-  .hme:hover::before {
+  h4:hover::before {
   transform-origin: left;
   transform: scaleX(1);
 } */
@@ -88,8 +87,19 @@
     font-weight: 100px;
     margin-right: 40px;
 }
+
+.log{
+    transition:all 0.3s ease-in-out;
+  }
+  .log:hover ,
+  .log:focus {
+  transform: scale(1.4);
+  opacity:0.9;
+
+  }
+
 .sig{
-    background-color: #56C870;;
+    background-color: #56C870;
     color: black;
     text-decoration: none;
     padding: 3px 15px;
@@ -97,3 +107,12 @@
     font-weight: 100px;
     margin-right: 40px;
 }
+.sig{
+    transition:all 0.3s ease-in-out;
+  }
+  .sig:hover ,
+  .sig:focus {
+  transform: scale(1.4);
+  opacity:0.9;
+  
+  }

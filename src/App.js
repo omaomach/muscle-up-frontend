@@ -6,11 +6,11 @@ import NavBar from './Components/NavBar';
 import About from './Components/About';
 import Services from './Components/Services';
 import Trainers from './Components/Trainers';
-import Contacts from './Components/Contacts';
 import SignUp from './Components/SignUp';
 import Login from './Components/Login';
-// import Dashboard from './Components/Dashboard';
-// import Admin from './Components/admin/Admin';
+import Footer from './Components/Footer';
+import Dashboard from './Components/Dashboard';
+import Admin from './Components/admin/Admin';
 function App() {
   return (
     <div className="App">
@@ -22,13 +22,14 @@ function App() {
             <Route exact path="/about" element={<About />}></Route>
             <Route path="/services" element={<Services />}></Route>
             <Route path="/trainers" element={<Trainers />}></Route>
-            <Route path="/contacts" element={<Contacts />} ></Route>
+            <Route path="/contacts" element={<Footer />} ></Route>
             <Route path="/login" element={<Login />} ></Route>
             <Route path="/signup" element={<SignUp />} ></Route>
           </Routes>
+          <Footer/>
         </Router>
-        {/* <Dashboard/> */}
-        {/* <Admin/> */}
+        {/* <Dashboard/>
+        <Admin/> */}
 
       </div>
     </div>

@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+    footer {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    
+    
+  }
+  
+  .footer {
+    display: flex;
+    flex-direction: row;
+    min-height: 30vh;
+    font-family: 'Roboto', sans-serif;
+
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0%;
+  }
+  
+  .summary {
+    width: 50%;
+    padding-left: 10vh;
+  }
+  
+  .summary > p {
+    color: #fafafa;
+  }
+  
+  .Company,
+  .Our-focus,
+  .Others {
+    width: 40%;
+  }
+  
+  .Company ul li,
+  .Our-focus ul li,
+  .Others ul li {
+    margin-bottom: 1.5em;
+    color: #fafafa;
+    font-size: 15px;
+  }
+  
+  .Company,
+  .Others > h2 {
+    color: #fafafa;
+    font-size: 20px;
+  }
+  
+  .footer-center {
+    text-align: center;
+    margin-bottom: 1em;
+    color: #fff;
+    font-size: 1.2em;
+  }
+  
+  .icons {
+    color: #fff;
+    display: flex;
+    margin-top: 2.5em;
+    width: 20%;
+    justify-content: space-between;
+  }
+  
+ 
+  
+  
+  
+  footer {
+    display: flex;
+    /* flex-direction: column; */
+    background-color:#173B3F ;
+    margin-top: 2vh;
+    padding-bottom: 5vh;
+    padding-top: 10vh;
+  }
+  
+  .contact {
+    color: #fff;
+  }
+  
+  .our {
+    color: #fafafa;
+  }
+  .a-logo{
+    color:#fff;
+    text-decoration: none;
+    font-size: 35px;
+  }
+  .bnb{
+    color: #fafafa;
+    font-size: 20px;
+    font-weight: 400;
+  }
