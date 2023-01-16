@@ -2,6 +2,7 @@ import React from 'react'
 import About from './About'
 import Trainers from './Trainers';
 import Services from './Services'
+import Testimonials from './Testimonials'
 import { Carousel } from 'react-carousel-minimal';
 import "./styles.css";
 
@@ -33,12 +34,12 @@ function Home() {
   ];
 
   const captionStyle = {
-    fontSize: '3em',
+    fontSize: '2em',
     fontWeight: 'bold',
     paddingBottom: '35vh',
     justifyContent: 'flexstart',
     display: 'flex',
-    marginLeft: '15%',
+    // paddingLeft: '15%',
     zIndex: '1',
     letterSpacing: '2px',
   
@@ -81,6 +82,9 @@ function Home() {
 
       <div className='Trainers'>
         <Trainers />
+      </div>
+      <div className='Testimonials'>
+        <Testimonials/>
       </div>
 
     </div>

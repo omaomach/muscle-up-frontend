@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background: #333; /*#333 */
-}
+/* body {
+  background: #333; 
+} */
 
 * {
   padding: 0;
