@@ -3,18 +3,17 @@ import "./Dashboard.css";
 import Dashnav from "./Dashnav";
 import Time from "./Time";
 import ClientDiet from "./ClientDiet";
-import 'animate.css';
+import "animate.css";
 import Exercise from "./Exercise";
 const Dashboard = () => {
   return (
     <div className="admin-container">
       <div className="admin-side">
-      <Dashnav className="nav"></Dashnav>
+        <Dashnav className="nav"></Dashnav>
       </div>
       <div className="client-details">
         <div className="client">
           <div className="dash-img">
-            
             <img
               className="client-img"
               src="https://images.pexels.com/photos/14711370/pexels-photo-14711370.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
@@ -39,19 +38,30 @@ const Dashboard = () => {
               <li>Weight:</li>
               <li>Age:</li>
             </div>
-            <div className="payment">
-              <p>Payment:</p>
+            <div className="target-weight">
+              <p>Target Weight:</p>
             </div>
             <div>
               <Time />
             </div>
           </div>
-     
+          <div className="daily-progress">
+            <div className="my-daily-excercises">
+            <h2>My Excercises</h2>
+            <div className="">
+
+            </div>
+            </div>
+
+            <div className="progress-container">
+              <div className="my-trainer"></div>
+              <div className="progress-bar"></div>
+            </div>
+          </div>
         </div>
       </div>
-{/* <Exercise/> */}
-
+      {/* <Exercise/> */}
     </div>
   );
 };
-export default Dashboard
+export default Dashboard;
