@@ -24,7 +24,7 @@
 }
 
 .nav-components {
-    margin-top: auto;
+    /* margin-top: 20px; */
     margin-bottom: auto;
     margin-left: 700px;
     display: flex;
@@ -42,7 +42,7 @@
 
 .nav-components h4 {
     text-decoration: none;
-    margin-top: auto;
+    margin-top: 23px;
     margin-bottom: auto;
     margin-left: 25px;
     font-size: larger;

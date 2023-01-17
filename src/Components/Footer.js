@@ -31,41 +31,41 @@ const Footer = () => {
           </ul>
         </div>
         <div className="Our-focus">
-          <h2 className="our">
-            <span className="bnb"> Contact</span>
+          <h2 >
+             Contact
           </h2>
           <ul>
             <li>
-              <a href="https://github.com/lilianwangechi" target="_blank">
+              <a href="https://github.com/lilianwangechi" target="_blank" className="git-link">
                 Lilian Wangechi
               </a>
             </li>
             <li>
-              <a href="https://github.com/Muthiira" target="_blank">
+              <a href="https://github.com/Muthiira" target="_blank" className="git-link">
                 Caleb Muthiira
               </a>
             </li>
            
 
             <li>
-              <a href="https://github.com/NdanuGrace" target="_blank">
+              <a href="https://github.com/NdanuGrace" target="_blank" className="git-link">
                 Grace Kyalo
               </a>
             </li>
             <li>
-              <a href="https://github.com/Masai11" target="_blank">
+              <a href="https://github.com/Masai11" target="_blank" className="git-link">
                 Roy Masai
               </a>
             </li>
             <li>
-              <a href="https://github.com/omaomach" target="_blank">
+              <a href="https://github.com/omaomach" target="_blank" className="git-link">
                 Joash Omao
               </a>
             </li>
             
           </ul>
         </div>
-        <div className="Others">
+        <div className="Company">
           <h2>Others</h2>
           <ul>
             <li>Terms of Services</li>
