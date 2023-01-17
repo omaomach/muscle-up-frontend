@@ -22,7 +22,11 @@ function App() {
 
 
   useEffect(() => {
+<<<<<<< HEAD
     fetch("http://127.0.0.1:3000/profile").then((response) => {
+=======
+    fetch("https://muscleup-production.up.railway.app/profile").then((response) => {
+>>>>>>> 694a4319acb553e84e51357a31c9097c449e223f
       if (response.ok) {
         response.json().then((client) => setClient(client));
       }

@@ -37,12 +37,14 @@ function Home() {
   const captionStyle = {
     fontSize: '2em',
     fontWeight: 'bold',
-    paddingBottom: '35vh',
-    justifyContent: 'flexstart',
-    display: 'flex',
+    // paddingBottom: '35vh',
+    // paddingRight:'60%',
+    // justifyContent:'centre',
+    // display: 'flex',
     // paddingLeft: '15%',
     zIndex: '1',
     letterSpacing: '2px',
+    
   
 
   }
@@ -65,12 +67,12 @@ function Home() {
           pauseIconSize="40px"
           slideBackgroundColor="darkgrey"
 
-          style={{
-            textAlign: "center",
-            // width: "1000px",
-            // maxHeight: "500px",
-            borderRadius: "12px"
-          }}
+          // style={{
+          //   textAlign: "center",
+          //   // width: "1000px",
+          //   // maxHeight: "500px",
+          //   borderRadius: "12px"
+          // }}
         />
 
       </div><br/><br/><br/><br/><br/>

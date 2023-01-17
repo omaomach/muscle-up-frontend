@@ -5,6 +5,9 @@
     footer {
     width: 100%;
     font-family: 'Roboto', sans-serif;
+    color: #fafafa;
+    font-size: 20px;
+    font-weight: 400;
     
     
   }
@@ -12,7 +15,7 @@
   .footer {
     display: flex;
     flex-direction: row;
-    min-height: 30vh;
+    height: 15vh;
     font-family: 'Roboto', sans-serif;
 
   }
@@ -23,18 +26,19 @@
   }
   
   .summary {
-    width: 50%;
+    width: 40%;
     padding-left: 10vh;
   }
   
   .summary > p {
     color: #fafafa;
+    font-size: 17px;
   }
   
   .Company,
   .Our-focus,
   .Others {
-    width: 40%;
+    width: 60%;
   }
   
   .Company ul li,
@@ -42,11 +46,11 @@
   .Others ul li {
     margin-bottom: 1.5em;
     color: #fafafa;
-    font-size: 15px;
+    font-size: 17px;
   }
   
   .Company,
-  .Others > h2 {
+  .Others h2 {
     color: #fafafa;
     font-size: 20px;
   }
@@ -76,15 +80,17 @@
     background-color:#173B3F ;
     margin-top: 2vh;
     padding-bottom: 5vh;
-    padding-top: 10vh;
+    padding-top: 5vh;
   }
   
   .contact {
     color: #fff;
+
   }
   
-  .our {
+  .Our-focus h2 {
     color: #fafafa;
+   
   }
   .a-logo{
     color:#fff;
@@ -94,5 +100,10 @@
   .bnb{
     color: #fafafa;
     font-size: 20px;
+    font-weight: 400;
+  }
+  .git-link{
+    color: #fafafa;
+    font-size: 17px;
     font-weight: 400;
   }
