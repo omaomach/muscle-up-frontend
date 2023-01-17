@@ -5,6 +5,8 @@ import Time from "./Time";
 import ClientDiet from "./ClientDiet";
 import "animate.css";
 import Exercise from "./Exercise";
+import ProgressIcon from "./ProgressIcon";
+
 const Dashboard = () => {
   return (
     <div className="admin-container">
@@ -47,15 +49,17 @@ const Dashboard = () => {
           </div>
           <div className="daily-progress">
             <div className="my-daily-excercises">
-            <h2>My Excercises</h2>
-            <div className="">
-
-            </div>
+              <h2>My Excercises</h2>
+              <div className=""></div>
             </div>
 
             <div className="progress-container">
-              <div className="my-trainer"></div>
-              <div className="progress-bar"></div>
+              <div className="my-trainer">
+                <h1>vhvhv</h1>
+              </div>
+              <div className="progress-bar">
+                <ProgressIcon percentProgress={0.4} />
+              </div>
             </div>
           </div>
         </div>
