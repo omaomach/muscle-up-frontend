@@ -16,14 +16,14 @@ import Dashnav from "./Dashnav";
         { name: "Davis Wayne", specialty: "CrossFit", imageUrl: "https://images.pexels.com/photos/3253501/pexels-photo-3253501.jpeg?auto=compress&cs=tinysrgb&w=1600" },
         
       ]
-      export default function Excercise() {
+      export default function ClientDiet() {
         return (
           <div className="container">
           <div className="admin-side">
             <Dashnav />
           </div>
           <div id='trainers'>
-            <h1 style={{ textAlign: "center" }}>Excercises</h1>
+            <h1 style={{ textAlign: "center" }}>Diet</h1>
             <div className="trainers client-diet">
                 {trainers.map((trainer, i) => (
                   <div key={i} className="card diet-card">
@@ -31,8 +31,7 @@ import Dashnav from "./Dashnav";
                     <div className="card-info">
                       <h3>{trainer.name}</h3>
 
-                      <p><span className='spec'>Type of Excercise:</span>  {trainer.specialty}</p>
-
+                      <p><span className='spec'>Diet Type:</span>  {trainer.specialty}</p>
                     </div>
                   </div>
                 ))}
@@ -41,6 +40,8 @@ import Dashnav from "./Dashnav";
           </div>
         )
       }
+      
+      
         
       
       

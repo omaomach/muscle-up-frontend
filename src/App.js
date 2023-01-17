@@ -14,12 +14,15 @@ import Admin from './Components/admin/Admin';
 import Client from "./Components/admin/Client";
 import Equipment from "./Components/admin/Equipment";
 import TrainersAdmin from "./Components/admin/TrainersAdmin";
+import ClientDiet from './Components/ClientDiet';
+import Exercise from './Components/Exercise';
+
 function App() {
   const [client, setClient] = useState(null)
 
 
   useEffect(() => {
-    fetch("http://127.0.0.1:3000/me").then((response) => {
+    fetch("https://muscleup-production.up.railway.app/me").then((response) => {
       if (response.ok) {
         response.json().then((client) => setClient(client));
       }
@@ -43,8 +46,13 @@ function App() {
             <Route exact path="/adminclients" element={<Client/>}></Route>
             <Route exact path="/adminequipments" element={<Equipment />}></Route>
             <Route path="/admintrainers" element={<TrainersAdmin />}></Route>
+            <Route exact path="/diet" element={<ClientDiet/>}></Route>
+            <Route exact path="/exercise" element={<Exercise/>}></Route> 
+
+
           </Routes>
           <Footer/>
+          {/* <Dashboard/> */}
         </Router>
         {/* <Admin/> */}
 

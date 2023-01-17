@@ -162,3 +162,25 @@ opacity:0.9;
 .testim p{
   font-size: 1.16em;
 }
+
+/* client-dash */
+.client-diet{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+margin-left: 40px;
+
+}
+.diet-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 400px;
+  height: 55vh;
+  margin: 0 15px;
+  border-radius: 12px;
+  background-color: #EDEFF1;
+  box-shadow: 0px 0px 10px #888888;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}

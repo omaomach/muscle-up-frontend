@@ -2,15 +2,19 @@ import React from "react";
 import "./Dashboard.css";
 import Dashnav from "./Dashnav";
 import Time from "./Time";
-import Diets from "./Diets";
+import ClientDiet from "./ClientDiet";
 import 'animate.css';
+import Exercise from "./Exercise";
 const Dashboard = () => {
   return (
-    <div className="dashboard">
+    <div className="admin-container">
+      <div className="admin-side">
       <Dashnav className="nav"></Dashnav>
+      </div>
       <div className="client-details">
         <div className="client">
           <div className="dash-img">
+            
             <img
               className="client-img"
               src="https://images.pexels.com/photos/14711370/pexels-photo-14711370.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
@@ -42,11 +46,11 @@ const Dashboard = () => {
               <Time />
             </div>
           </div>
-      {/* <div>
-        <Diets/>
-      </div> */}
+     
         </div>
       </div>
+{/* <Exercise/> */}
+
     </div>
   );
 };

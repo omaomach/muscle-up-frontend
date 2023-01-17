@@ -1,20 +1,22 @@
-import React from 'react'
-import "./Dashnav.css"
+import React from "react";
+import "./admin/AdminSideNav.css";
+import NavBarClient from "./NavBarClient";
+import { NavLink, useNavigate } from 'react-router-dom'
+
 const Dashnav = () => {
   return (
-    <div className='sidebar'>
-        <div className='logo'>
-          <h1>Muscle up</h1>
-        </div>
-        <div className="links">
-            <ul>
-              <li className='dash'><a href='#'>Dashboard</a></li>
-              <li className='logout'><a href=''>Logout</a></li>
-              <li className='logout'><a href='Diets.js'>Diet</a></li>
+    <div className="admin-sidebar">
+      <div className="logo">
+        <h1>MuscleUp</h1>
+      </div>
 
-            </ul>
-        </div>
+
+      <div className="border-btm">
+
+      </div>
+      <NavBarClient />
+      <NavLink to="/login"><button className="admin-btn" type="submit">Logout</button></NavLink>
     </div>
-  )
-}
+  );
+};
 export default Dashnav
