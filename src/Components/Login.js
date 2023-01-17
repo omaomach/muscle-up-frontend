@@ -10,7 +10,7 @@ function Login({ setClient }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("https://muscleup-production.up.railway.app/login", {
+    fetch("http://127.0.0.1:3000/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -27,7 +27,6 @@ function Login({ setClient }) {
           } else {
             navigate("/dashboard");
           }
-
           localStorage.setItem("jwt", data.jwt);
         });
       }

@@ -5,9 +5,14 @@ import "./Client.css"
 
 export default function TrainersAdmin() {
   const [trainers, setTrainers] = useState([]);
+  const token = localStorage.getItem("jwt")
 
   useEffect(() => {
-    fetch("https://muscleup-production.up.railway.app/trainers")
+    fetch("http://127.0.0.1:3000/trainers", {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    })
       .then((r) => r.json())
       .then((data) => setTrainers(data));
   }, []);
@@ -33,7 +38,7 @@ export default function TrainersAdmin() {
             </tr>
           </thead>
           <tbody>
-            {Object.keys(trainers).length > 0 && trainers.map((trainer) => {
+            {trainers.map((trainer) => {
               return (
                 <tr>
                   <td>

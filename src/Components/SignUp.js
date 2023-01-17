@@ -13,7 +13,7 @@ function SignUp({ setClient }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("https://muscleup-production.up.railway.app/signup", {
+    fetch("http://127.0.0.1:3000/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

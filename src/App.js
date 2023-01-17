@@ -22,11 +22,7 @@ function App() {
 
 
   useEffect(() => {
-<<<<<<< Updated upstream
-    fetch("https://muscleup-production.up.railway.app/me").then((response) => {
-=======
     fetch("http://127.0.0.1:3000/profile").then((response) => {
->>>>>>> Stashed changes
       if (response.ok) {
         response.json().then((client) => setClient(client));
       }

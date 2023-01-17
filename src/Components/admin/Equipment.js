@@ -5,9 +5,14 @@ import "./Client.css"
 
 export default function Equipment() {
   const [machines, setMachines] = useState([]);
+  const token = localStorage.getItem("jwt")
 
   useEffect(() => {
-    fetch("https://muscleup-production.up.railway.app/machines")
+    fetch("http://127.0.0.1:3000/machines", {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    })
       .then((r) => r.json())
       .then((data) => setMachines(data));
   }, []);
