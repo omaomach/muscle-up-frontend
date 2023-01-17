@@ -54,6 +54,7 @@ function SignUp({ setClient }) {
                 id="name"
                 className="username"
                 placeholder="Username"
+                required
                 onChange={(e) => setUsername(e.target.value)}
               />
               <input
@@ -61,6 +62,7 @@ function SignUp({ setClient }) {
                 id="email"
                 className="email"
                 placeholder="Email"
+                required
                 onChange={(e) => setEmail(e.target.value)}
               />
               <input
@@ -68,6 +70,7 @@ function SignUp({ setClient }) {
                 id="phone_number"
                 className="phone_number"
                 placeholder="Phone Number"
+                required
                 onChange={(e) => setPhone_Number(e.target.value)}
               />
               <input
@@ -75,6 +78,7 @@ function SignUp({ setClient }) {
                 id="password"
                 className="password"
                 placeholder="Password"
+                required
                 onChange={(e) => setPassword(e.target.value)}
               />
               <input
@@ -82,6 +86,7 @@ function SignUp({ setClient }) {
                 id="password_confirmation"
                 className="password"
                 placeholder="Password Confirmation"
+                required
                 onChange={(e) => setPasswordConfirmation(e.target.value)}
               />
               <button className="signup" type="submit">

@@ -51,6 +51,7 @@ function Login({ setClient }) {
                 className="username"
                 placeholder="Username"
                 value={name}
+                required
                 onChange={(e) => setUsername(e.target.value)}
               />
               <input
@@ -59,6 +60,7 @@ function Login({ setClient }) {
                 className="password"
                 placeholder="Password"
                 value={password}
+                required
                 onChange={(e) => setPassword(e.target.value)}
               />
               <button className="sign-in" type="submit">
