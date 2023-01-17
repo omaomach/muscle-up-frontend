@@ -184,6 +184,22 @@ a:link {
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
 }
+.progress-container{
+    width: 100%;
+    display: flex;
+    margin-top: 2vh;
+
+}
+.my-trainer{
+    width: 50%;
+}
+.progress-bar{
+    width: 50%;
+}
+.progress-svg{
+transform: rotateZ(-90deg);
+}
+
 .logo{
   color: white;
 }

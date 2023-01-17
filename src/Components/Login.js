@@ -27,7 +27,6 @@ function Login({ setClient }) {
           } else {
             navigate("/dashboard");
           }
-
           localStorage.setItem("jwt", data.jwt);
         });
       }
