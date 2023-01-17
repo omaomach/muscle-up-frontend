@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import AdminSidenav from "./AdminSideNav";
+import styled from "styled-components";
+import Button from "./style/Button";
 import "./Admin.css";
 
 export default function Client() {
@@ -41,6 +43,8 @@ export default function Client() {
                   <td>{client.email}</td>
                   <td>{client.level}</td>
                   <td>{client.payment}</td>
+			    <Button color="primary" type="delete" onClick={() =>onDelete(product.id)}>DELETE</Button>
+
                 </tr>
               );
             })}
