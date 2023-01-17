@@ -1,7 +1,15 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 
 export default function Equipment() {
+  const[machines, setMachines] = useState([]);
+
+  useEffect(() =>{
+    fetch('https://muscleup-production.up.railway.app/machines')
+    .then(r => r.json())
+    .then(data => setMachines(data))
+  },[])
   return (
+    
     <div className="table">
       <h1>Equipment</h1>
       <table>
@@ -16,49 +24,29 @@ export default function Equipment() {
           </tr>
         </thead>
         <tbody>
+        {machines.map((machine) =>{
+return(
           <tr>
-          <td>
-              <img
-                className="avatar"
-                src="https://images.pexels.com/photos/14007218/pexels-photo-14007218.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              />
-            </td>
-            <td>1</td>
-            <td>Mark</td>
-            <td>0728300345</td>
-            
-            <td>complete</td>
-          </tr>
-          <tr>
-          <td>
-              <img
-                className="avatar"
-                src="https://images.pexels.com/photos/14007218/pexels-photo-14007218.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              />
-            </td>
-            <td>2</td>
 
-            <td>Mark</td>
-            <td>0728300345</td>
-            
-            <td>complete</td>
-          </tr>
-          <tr>
-          <td>
+            <td>
+        
               <img
                 className="avatar"
-                src="https://images.pexels.com/photos/14007218/pexels-photo-14007218.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                src={machine.image}
               />
             </td>
-            <td>3</td>
 
-            <td>Mark</td>
-            <td>0728300345</td>
-            
-            <td>complete</td>
+            <td>{machine.id}</td>
+            <td>{machine.name}</td>
+            <td>{machine.condition}</td>
+            <td>{machine.number}</td>
+      
           </tr>
+  )})}        
+
         </tbody>
+
       </table>
     </div>
-  )
+  );
 }

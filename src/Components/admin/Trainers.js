@@ -1,6 +1,17 @@
-import React from "react";
+import React,{useState, useEffect}from "react";
 
 export default function Trainers() {
+  const[trainers, setTrainers] = useState([]);
+
+  useEffect(() =>{
+    fetch('https://muscleup-production.up.railway.app/trainers')
+    .then(r => r.json())
+    .then(data => setTrainers(data))
+  },[])
+
+
+
+
   return (
     <div className="table">
       <h1>Trainers</h1>
@@ -13,55 +24,33 @@ export default function Trainers() {
             <th>Name</th>
             <th>Phone Number</th>
             <th>Email</th>
-            <th>Speciality</th>
+            <th>Age</th>
           </tr>
         </thead>
         <tbody>
+        {trainers.map((trainer) =>{
+return(
           <tr>
+
             <td>
+        
               <img
                 className="avatar"
-                src="https://images.pexels.com/photos/14007218/pexels-photo-14007218.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                src={trainer.image}
               />
             </td>
 
-            <td>1</td>
-            <td>Mark</td>
-            <td>0728300345</td>
-            <td>mark@gmail.com</td>
-            <td>complete</td>
+            <td>{trainer.id}</td>
+            <td>{trainer.name}</td>
+            <td>{trainer.phone_number}</td>
+            <td>{trainer.email}</td>
+            <td>{trainer.age}</td>
+      
           </tr>
-          <tr>
-            <td>
-              <img
-                className="avatar"
-                src="https://images.pexels.com/photos/14007218/pexels-photo-14007218.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              />
-            </td>
+  )})}        
 
-            <td>2</td>
-
-            <td>Mark</td>
-            <td>0728300345</td>
-            <td>mark@gmail.com</td>
-            <td>complete</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                className="avatar"
-                src="https://images.pexels.com/photos/14007218/pexels-photo-14007218.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              />
-            </td>
-
-            <td>3</td>
-
-            <td>Mark</td>
-            <td>0728300345</td>
-            <td>mark@gmail.com</td>
-            <td>complete</td>
-          </tr>
         </tbody>
+
       </table>
     </div>
   );

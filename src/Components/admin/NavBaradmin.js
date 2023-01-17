@@ -8,7 +8,7 @@ export default function NavBaradmin() {
   return (
     <div className="nav-admin">
       <div className="cli">
-        <NavLink className="adm-links" style={{ textDecoration: "none" }} to="/client">
+        <NavLink className="adm-links" style={{ textDecoration: "none" }} to="/">
           <a >Clients</a>
         </NavLink>
         <NavLink className="adm-links" style={{ textDecoration: "none" }} to="/trainers">

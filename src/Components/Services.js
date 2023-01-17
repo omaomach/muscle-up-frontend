@@ -12,8 +12,6 @@ const services = [
   { name: "Crossfit & MMA", specialty: "CrossFit is a high-intensity, functional fitness program that incorporates a mix of weightlifting, gymnastics, and cardio exercises. Our certified trainers lead group classes and provide individualized coaching and programming for athletes of all levels.", imageUrl: "{SportsMartialArtsIcon}" },
   { name: "Boxing & Kickboxing", specialty: "Boxing is a combat sport in which two people engage in a fight using only their fists. It is a sport that requires a combination of physical strength, speed, endurance, and technique.", imageUrl: "https://images.pexels.com/photos/6635223/pexels-photo-6635223.jpeg?auto=compress&cs=tinysrgb&w=1600" },
   
-  
-  
 ]
 export default function Trainers() {
   return (

@@ -8,8 +8,10 @@ const Dashnav = () => {
         </div>
         <div className="links">
             <ul>
-              <li className='nav-link'><a href=''>Dashboard</a></li>
-              <li className='nav-link'><a href=''>Logout</a></li>
+              <li className='dash'><a href='#'>Dashboard</a></li>
+              <li className='logout'><a href=''>Logout</a></li>
+              <li className='logout'><a href='Diets.js'>Diet</a></li>
+
             </ul>
         </div>
     </div>
