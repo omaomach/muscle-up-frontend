@@ -20,6 +20,7 @@ function Login({ setClient }) {
     }).then((r) => {
       if (r.ok) {
         r.json().then((data) => {
+          console.log(data)
           setClient(data.client);
           if (data.client.admin) {
             navigate("/admin");

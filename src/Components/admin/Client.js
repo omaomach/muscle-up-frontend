@@ -7,7 +7,7 @@ export default function Client() {
   useEffect(() => {
     fetch("http://127.0.0.1:3000/clients")
       .then((r) => r.json())
-      .then((data) => console.log(data));
+      .then((data) => setClients(data));
   }, []);
   return (
     <div className="container">
