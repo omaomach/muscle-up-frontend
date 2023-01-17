@@ -11,6 +11,8 @@ export default function Client() {
       .then((r) => r.json())
       .then((data) => setClients(data));
   }, []);
+
+
   return (
     <div className="container">
       <div className="admin-side">
@@ -43,7 +45,7 @@ export default function Client() {
                   <td>{client.email}</td>
                   <td>{client.level}</td>
                   <td>{client.payment}</td>
-			    <Button color="primary" type="delete" onClick={() =>onDelete(product.id)}>DELETE</Button>
+			            <Button color="primary" type="delete" onClick={() =>onDelete(product.id)}>DELETE</Button>
 
                 </tr>
               );
