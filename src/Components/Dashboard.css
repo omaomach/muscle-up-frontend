@@ -182,7 +182,7 @@ a:link {
   display:inline-block;
   padding: 20px 0;
 
-  -webkit-background-clip: text;
+  /* -webkit-background-clip: text; */
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
 }
