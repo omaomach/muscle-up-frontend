@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from "react";
 import AdminSidenav from "./AdminSideNav";
 import "./Admin.css";
-import "./Client.css"
 
 export default function Client() {
   const [clients, setClients] = useState([]);
   useEffect(() => {
-    fetch("https://muscleup-production.up.railway.app/clients")
+    fetch("http://127.0.0.1:3000/clients")
       .then((r) => r.json())
-      .then((data) => setClients(data));
+      .then((data) => console.log(data));
   }, []);
   return (
-    <>
+    <div className="container">
       <div className="admin-side">
         <AdminSidenav />
       </div>
@@ -48,6 +47,6 @@ export default function Client() {
           </tbody>
         </table>
       </div>
-    </>
+    </div>
   );
 }

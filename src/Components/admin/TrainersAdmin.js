@@ -3,7 +3,7 @@ import AdminSidenav from "./AdminSideNav";
 import "./Admin.css";
 import "./Client.css"
 
-export default function Trainers() {
+export default function TrainersAdmin() {
   const [trainers, setTrainers] = useState([]);
 
   useEffect(() => {
@@ -13,7 +13,7 @@ export default function Trainers() {
   }, []);
 
   return (
-    <>
+    <div className="container">
       <div className="admin-side">
         <AdminSidenav />
       </div>
@@ -51,6 +51,6 @@ export default function Trainers() {
           </tbody>
         </table>
       </div>
-    </>
+    </div>
   );
 }

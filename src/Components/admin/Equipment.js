@@ -12,7 +12,7 @@ export default function Equipment() {
       .then((data) => setMachines(data));
   }, []);
   return (
-    <>
+    <div className="container">
       <div className="admin-side">
         <AdminSidenav />
       </div>
@@ -47,6 +47,6 @@ export default function Equipment() {
           </tbody>
         </table>
       </div>
-    </>
+    </div>
   );
 }
