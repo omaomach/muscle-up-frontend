@@ -1,0 +1,96 @@
+body {
+  background-color: #ffffff;
+}
+
+.main-parent {
+  height: 850px;
+  width: 1750px;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+}
+
+.right {
+  width: 1025px;
+  height: 850px;
+  background-color: lightgrey;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.atlas {
+  max-width: 700px;
+  max-height: 765px;
+  border-radius: 12px;
+  margin-top: 25px;
+}
+
+.art-text p {
+  font-size: x-large;
+  font-style: italic;
+  color: #000000;
+  font-family: 'Snell Roundhand, cursive';
+}
+
+.sign-up-header {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #000000;
+    font-style: italic;
+    font-family: 'Snell Roundhand, cursive';
+}
+
+.sign-up-components {
+  background-color: #173B3F ;
+  width: 500px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.sign-up-components input {
+  width: 300px;
+  height: 40px;
+  margin-top: 20px;
+  display: block;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #000000;
+}
+.signup {
+  width: 200px;
+  height: 35px;
+  border: 1px solid #000000;
+  background: ffffff;
+  cursor: pointer;
+  color: #000000;
+  margin-top: 12px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+}
+
+.login-text {
+    margin-left: 80%;
+    color: #000000;
+    font-style: italic;
+    font-family: 'Snell Roundhand, cursive';
+}
+
+.login-text a {
+  text-decoration: none;
+}
