@@ -1,8 +1,8 @@
 import React from "react";
-import "./Client.css";
 import AdminSidenav from "./AdminSideNav";
+import "./Admin.css";
 
-export default function Client() {
+export default function TrainersAdmin() {
   return (
     <div className="container">
       <div className="admin-side">
@@ -10,16 +10,17 @@ export default function Client() {
       </div>
 
       <div className="table">
-        <h1>Clients</h1>
+        <h1>Trainers</h1>
         <table>
           <thead className="head">
             <tr>
               <th>Avatar</th>
+
               <th>Id</th>
               <th>Name</th>
               <th>Phone Number</th>
               <th>Email</th>
-              <th>Payment</th>
+              <th>Speciality</th>
             </tr>
           </thead>
           <tbody>
@@ -28,8 +29,10 @@ export default function Client() {
                 <img
                   className="avatar"
                   src="https://images.pexels.com/photos/14007218/pexels-photo-14007218.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="avatar"
                 />
               </td>
+
               <td>1</td>
               <td>Mark</td>
               <td>0728300345</td>
@@ -43,6 +46,7 @@ export default function Client() {
                   src="https://images.pexels.com/photos/14007218/pexels-photo-14007218.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 />
               </td>
+
               <td>2</td>
 
               <td>Mark</td>
@@ -57,6 +61,7 @@ export default function Client() {
                   src="https://images.pexels.com/photos/14007218/pexels-photo-14007218.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 />
               </td>
+
               <td>3</td>
 
               <td>Mark</td>

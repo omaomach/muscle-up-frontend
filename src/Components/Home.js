@@ -5,6 +5,7 @@ import Services from './Services'
 import Testimonials from './Testimonials'
 import { Carousel } from 'react-carousel-minimal';
 import "./styles.css";
+import NavBar from './NavBar';
 
 function Home() {
   const data = [
@@ -48,6 +49,7 @@ function Home() {
  
   return (
     <div >
+      <NavBar />
       <div className="carousel">
 
         <Carousel
