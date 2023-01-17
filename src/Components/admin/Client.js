@@ -1,7 +1,13 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "./Client.css"
 
 export default function Client() {
+  const[clients, setClients] = useState([])
+  useEffect(() =>{
+    fetch('https://muscleup-production.up.railway.app/clients')
+    .then(r => r.json())
+    .then(data => setClients(data))
+  },[])
   return (
     <div className="table">
       <h1>Clients</h1>
@@ -11,54 +17,38 @@ export default function Client() {
             <th>Avatar</th>
             <th>Id</th>
             <th>Name</th>
-            <th>Phone Number</th>
             <th>Email</th>
-            <th>Payment</th>
+            <th>Level</th>
+            <th>Payment Status</th>
+
+
           </tr>
         </thead>
         <tbody>
+        {clients.map((client) =>{
+return(
           <tr>
-          <td>
-              <img
-                className="avatar"
-                src="https://images.pexels.com/photos/14007218/pexels-photo-14007218.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              />
-            </td>
-            <td>1</td>
-            <td>Mark</td>
-            <td>0728300345</td>
-            <td>mark@gmail.com</td>
-            <td>complete</td>
-          </tr>
-          <tr>
-          <td>
-              <img
-                className="avatar"
-                src="https://images.pexels.com/photos/14007218/pexels-photo-14007218.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              />
-            </td>
-            <td>2</td>
 
-            <td>Mark</td>
-            <td>0728300345</td>
-            <td>mark@gmail.com</td>
-            <td>complete</td>
-          </tr>
-          <tr>
-          <td>
+            <td>
+        
               <img
-                className="avatar"
-                src="https://images.pexels.com/photos/14007218/pexels-photo-14007218.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                className="avatar client-av" 
+                src={client.image}
               />
             </td>
-            <td>3</td>
 
-            <td>Mark</td>
-            <td>0728300345</td>
-            <td>mark@gmail.com</td>
-            <td>complete</td>
+            <td>{client.id}</td>
+            <td>{client.name}</td>
+            <td>{client.email}</td>
+            <td>{client.level}</td>
+            <td>{client.payment}</td>
+
+      
           </tr>
+  )})}        
+
         </tbody>
+
       </table>
     </div>
   );

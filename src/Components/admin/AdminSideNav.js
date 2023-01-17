@@ -6,7 +6,7 @@ const AdminSidenav = () => {
   return (
     <div className="admin-sidebar">
       <div className="logo">
-        <h1>Muscle up</h1>
+        <h1>MuscleUp</h1>
       </div>
       <div className="admin-image">
         <img
@@ -16,8 +16,10 @@ const AdminSidenav = () => {
         />
       </div>
 
-      <h2>Admin: <span>John Doe</span></h2>
-      
+      <h2>Administrator</h2>
+      <div className="border-btm">
+
+      </div>
       <NavBaradmin/>
 
       <button className="admin-btn" type="submit">

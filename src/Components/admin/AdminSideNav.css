@@ -1,6 +1,6 @@
 .admin-sidebar {
     width: 100%;
-    min-height: 100vh;
+    min-height: 113vh;
     /* background-color: #1E554F; */
     background-color: #173B3F;
     margin: 0;
@@ -98,9 +98,21 @@
     transform-origin: left;
     transform: scaleX(1);
   }
-span{
-    font-weight: 100;
+  .admin-sidebar h2 span{
+font-weight: 250;
 }
-h2{
-    
+.logo h1{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10%;
+}
+.admin-sidebar h2{
+    margin-top: 10px;
+    font-size: 25px;
+    margin-bottom: 5%;
+    width: 100%;
+}
+.border-btm{
+    border-bottom: 1px solid #b0b9c2 ;
+    width: 100%;
 }

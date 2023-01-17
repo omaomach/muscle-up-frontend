@@ -11,6 +11,11 @@ table{
     
 
 }
+.table h1{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 1%;  
+}
 .head{
     
     background-color:#56C870 ;
@@ -26,7 +31,17 @@ tbody{
     font-size: 20px;
 }
 .avatar{
-    height:7vh;
-    width: 50%;
+    height:9vh;
+    width: 35%;
     border-radius: 1000px;
+    margin-left: 15%;
+}
+tbody tr{
+    height: 10vh;
+}
+ .client-av{
+    height:9vh;
+    width: 45%;
+    border-radius: 1000px;
+    margin-left: 15%;
 }

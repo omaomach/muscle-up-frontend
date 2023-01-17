@@ -22,7 +22,7 @@ export default function Admin() {
         
       <div className="navbar-admin">
           <Routes>
-            <Route exact path="client" element={<Client/>}></Route>
+            <Route exact path="/" element={<Client/>}></Route>
             <Route exact path="/equipment" element={<Equipment />}></Route>
             <Route path="/trainers" element={<Trainers />}></Route>
             </Routes>

@@ -12,7 +12,7 @@ import Carousel from "react-elastic-carousel";
         useEffect(() =>{
             fetch('https://muscleup-production.up.railway.app/diets')
             .then(r => r.json())
-            .then(data => setDiet(data))
+            .then(data => console.log(data))
           },[])
         return (
           <div id='diet-container'>
@@ -20,7 +20,7 @@ import Carousel from "react-elastic-carousel";
               <Carousel breakPoints={breakPoints} >
                 {diets.map((diet, i) => (
                   <div key={i} className="card">
-                    <img src={diet.image} alt={`${diet.name} - ${diet.specialty}`} className="card-img" />
+                    <img src={diet.imageUrl} alt={`${diet.name} - ${diet.specialty}`} className="card-img" />
                     <div className="card-info">
                       <h3>{diet.name}</h3>
                       <p><span className='spec'>Specialty:</span>  {diet.specialty}</p>
