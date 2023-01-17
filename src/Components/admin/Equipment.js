@@ -8,7 +8,7 @@ export default function Equipment() {
   const token = localStorage.getItem("jwt")
 
   useEffect(() => {
-    fetch("http://127.0.0.1:3000/machines", {
+    fetch("https://muscleup-production.up.railway.app/machines", {
       headers: {
         Authorization: `Bearer ${token}`
       }

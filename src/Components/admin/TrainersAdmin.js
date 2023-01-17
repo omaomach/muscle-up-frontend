@@ -8,7 +8,7 @@ export default function TrainersAdmin() {
   const token = localStorage.getItem("jwt")
 
   useEffect(() => {
-    fetch("http://127.0.0.1:3000/trainers", {
+    fetch("https://muscleup-production.up.railway.app/trainers", {
       headers: {
         Authorization: `Bearer ${token}`
       }
