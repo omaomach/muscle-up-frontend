@@ -7,7 +7,7 @@ export default function TrainersAdmin() {
   const [trainers, setTrainers] = useState([]);
 
   useEffect(() => {
-    fetch("https://muscleup-production.up.railway.app/trainers")
+    fetch("http://127.0.0.1:3000/trainers")
       .then((r) => r.json())
       .then((data) => setTrainers(data));
   }, []);

@@ -2,16 +2,26 @@ import React, { useState, useEffect } from "react";
 import AdminSidenav from "./AdminSideNav";
 import styled from "styled-components";
 import Button from "./style/Button";
+import { Delete } from "./delete";
 import "./Admin.css";
 
 export default function Client() {
   const [clients, setClients] = useState([]);
   useEffect(() => {
-    fetch("https://muscleup-production.up.railway.app/clients")
+    fetch("http://127.0.0.1:3000/clients")
       .then((r) => r.json())
       .then((data) => setClients(data));
   }, []);
 
+  function onDelete(id){
+    Delete(id).then(resp => {
+      const index = clients.findIndex(r => r.id === id);
+      console.log(index)
+      let latestUpdate = [...clients];
+      latestUpdate.splice(index, 1);
+      setClients(latestUpdate);
+    })
+  }
 
   return (
     <div className="container">
@@ -45,8 +55,7 @@ export default function Client() {
                   <td>{client.email}</td>
                   <td>{client.level}</td>
                   <td>{client.payment}</td>
-			            <Button color="primary" type="delete" onClick={() =>onDelete(product.id)}>DELETE</Button>
-
+			            <Button color="primary" type="delete" onClick={() =>onDelete(client.id)}>DELETE</Button>
                 </tr>
               );
             })}
