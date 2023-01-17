@@ -33,7 +33,7 @@ export default function TrainersAdmin() {
             </tr>
           </thead>
           <tbody>
-            {trainers.map((trainer) => {
+            {Object.keys(trainers).length > 0 && trainers.map((trainer) => {
               return (
                 <tr>
                   <td>
