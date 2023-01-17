@@ -3,14 +3,15 @@ import AdminSidenav from "./AdminSideNav";
 import "./Admin.css";
 import "./Client.css"
 
-export default function Equipment() {
-  const [machines, setMachines] = useState([]);
+export default function Trainers() {
+  const [trainers, setTrainers] = useState([]);
 
   useEffect(() => {
-    fetch("https://muscleup-production.up.railway.app/machines")
+    fetch("https://muscleup-production.up.railway.app/trainers")
       .then((r) => r.json())
-      .then((data) => setMachines(data));
+      .then((data) => setTrainers(data));
   }, []);
+
   return (
     <>
       <div className="admin-side">
@@ -18,29 +19,32 @@ export default function Equipment() {
       </div>
 
       <div className="table">
-        <h1>Equipment</h1>
+        <h1>Trainers</h1>
         <table>
           <thead className="head">
             <tr>
               <th>Avatar</th>
+
               <th>Id</th>
               <th>Name</th>
-              <th>Condition</th>
-              <th>Number</th>
+              <th>Phone Number</th>
+              <th>Email</th>
+              <th>Age</th>
             </tr>
           </thead>
           <tbody>
-            {machines.map((machine) => {
+            {trainers.map((trainer) => {
               return (
                 <tr>
                   <td>
-                    <img className="avatar" src={machine.image} />
+                    <img className="avatar" src={trainer.image} />
                   </td>
 
-                  <td>{machine.id}</td>
-                  <td>{machine.name}</td>
-                  <td>{machine.condition}</td>
-                  <td>{machine.number}</td>
+                  <td>{trainer.id}</td>
+                  <td>{trainer.name}</td>
+                  <td>{trainer.phone_number}</td>
+                  <td>{trainer.email}</td>
+                  <td>{trainer.age}</td>
                 </tr>
               );
             })}

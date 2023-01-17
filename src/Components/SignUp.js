@@ -1,74 +1,107 @@
 import React, { useState } from "react";
-import Stepper from "./Stepper";
-import StepperControl from "./StepperControl";
-import { UseContextProvider } from "../contexts/StepperContext";
+import "./SignUp.css";
+import { NavLink, useNavigate } from "react-router-dom";
+import NavBar from "./NavBar";
 
-import Account from "./steps/Account";
-import Details from "./steps/Details";
-import Payment from "./steps/Payment";
-import Final from "./steps/Final";
-import './SignUp.css'
-import Trainer from "./steps/Trainer";
-import Diet from "./steps/Diet";
+function SignUp({ setClient }) {
+  const navigate = useNavigate();
+  const [name, setUsername] = useState("");
+  const [phone_number, setPhone_Number] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [passwordConfirmation, setPasswordConfirmation] = useState("");
 
-function SignUp() {
-  const [currentStep, setCurrentStep] = useState(1);
-
-  const steps = [
-    "User Information",
-    "User Stats",
-    "Trainer",
-    "Diet",
-    "Payment",
-    "Complete"
-  ];
-
-  const displayStep = (step) => {
-    switch (step) {
-      case 1:
-        return <Account />;
-      case 2:
-        return <Details />;
-      case 3:
-        return <Trainer />;
-      case 4:
-        return <Diet />;
-      case 5:
-        return <Payment />;
-      case 6:
-        return <Final />;
-      default:
-    }
-  };
-
-  const handleClick = (direction) => {
-    let newStep = currentStep;
-
-    direction === "next" ? newStep++ : newStep--;
-    // check if steps are within bounds
-    newStep > 0 && newStep <= steps.length && setCurrentStep(newStep);
-  };
+  function handleSubmit(e) {
+    e.preventDefault();
+    fetch("http://127.0.0.1:3000/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        phone_number,
+        email,
+        password,
+        password_confirmation: passwordConfirmation,
+      }),
+    }).then((r) => {
+      if (r.ok) {
+        r.json().then((data) => {
+          setClient(data.client);
+          navigate("/dashboard");
+          localStorage.setItem("jwt", data.jwt);
+        });
+      }
+    });
+  }
 
   return (
-    <div className="mx-auto rounded-2xl bg-white pb-2 shadow-xl md:w-1/2">
-      {/* Stepper */}
-      <div className="horizontal container mt-5 ">
-        <Stepper steps={steps} currentStep={currentStep} />
+    <>
 
-        <div className="my-10 p-10 ">
-          <UseContextProvider>{displayStep(currentStep)}</UseContextProvider>
+    <NavBar />
+
+      <div className="main-parent">
+        <div className="right">
+          <div className="sign-up-components">
+            <div className="sign-up-header">
+              <h3>Hello, please sign up to access muscleUp</h3>
+            </div>
+            <form onSubmit={handleSubmit}>
+              <input
+                type="text"
+                id="name"
+                className="username"
+                placeholder="Username"
+                required
+                onChange={(e) => setUsername(e.target.value)}
+              />
+              <input
+                type="email"
+                id="email"
+                className="email"
+                placeholder="Email"
+                required
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <input
+                type="number"
+                id="phone_number"
+                className="phone_number"
+                placeholder="Phone Number"
+                required
+                onChange={(e) => setPhone_Number(e.target.value)}
+              />
+              <input
+                type="password"
+                id="password"
+                className="password"
+                placeholder="Password"
+                required
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <input
+                type="password"
+                id="password_confirmation"
+                className="password"
+                placeholder="Password Confirmation"
+                required
+                onChange={(e) => setPasswordConfirmation(e.target.value)}
+              />
+              <button className="signup" type="submit">
+                Sign Up
+              </button>
+            </form>
+          </div>
+          <div className="login-text">
+            <NavLink to="/login">
+              <p>Already a member? Login</p>
+            </NavLink>
+          </div>
         </div>
       </div>
-
-      {/* navigation button */}
-      {currentStep !== steps.length && (
-        <StepperControl
-          handleClick={handleClick}
-          currentStep={currentStep}
-          steps={steps}
-        />
-      )}
-    </div>
+    </>
   );
 }
 
