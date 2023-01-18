@@ -8,7 +8,7 @@ import Exercise from "./Exercise";
 import ProgressIcon from "./ProgressIcon";
 import Card from "./Card";
 
-const Dashboard = ({ clientExercise, removeFromClientExercise }) => {
+const Dashboard = ({ client, clientExercise, removeFromClientExercise }) => {
 
   // console.log(clientExercise)
   const exer = clientExercise.map((exercise) => {
@@ -17,6 +17,8 @@ const Dashboard = ({ clientExercise, removeFromClientExercise }) => {
       <Card key={exercise.id} exercise={exercise} handleExercise={removeFromClientExercise}/>
     )
   })
+
+  console.log(client)
 
   return (
     <div className="admin-container">

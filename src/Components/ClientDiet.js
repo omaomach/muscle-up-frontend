@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import DietCard from "./DietCard";
 import Carousel from "react-elastic-carousel";
 import Dashnav from "./Dashnav";
 const breakPoints = [
@@ -16,7 +17,7 @@ const breakPoints = [
 //     { name: "Davis Wayne", specialty: "CrossFit", imageUrl: "https://images.pexels.com/photos/3253501/pexels-photo-3253501.jpeg?auto=compress&cs=tinysrgb&w=1600" },
 
 //   ]
-export default function ClientDiet() {
+export default function ClientDiet({ addToClientDiet }) {
   const [diets, setDiets] = useState([]);
   const token = localStorage.getItem("jwt");
 
@@ -36,24 +37,9 @@ export default function ClientDiet() {
       </div>
       <div id="trainers" className="diet-height">
         <h1 style={{ textAlign: "center" }}>Diet</h1>
-        <div className="trainers client-diet">
-          {diets.map((diet, i) => (
-            <div key={i} className="card diet-card">
-              <img
-                src={diet.image}
-                
-                className="card-img"
-              />
-              <div className="card-info">
-                <h3>{diet.name}</h3>
-
-                <p>
-                  <span className="spec">Diet Type:</span> {diet.diet_type}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+        {diets.map((diet, i) => (
+          <DietCard key={i} diet={diet} handleClient={addToClientDiet}/>
+        ))}
       </div>
     </div>
   );

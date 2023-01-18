@@ -21,6 +21,7 @@ import Supplements from './Components/Supplements';
 function App() {
   const [client, setClient] = useState(null)
   const [clientExercise, setClientExercise] = useState([])
+  const [clientDiet, setClientDiet] = useState([])
 
 
   useEffect(() => {
@@ -37,6 +38,12 @@ function App() {
     if (!updateExercises) setClientExercise([...clientExercise, tizi])
   }
 
+  function addToClientDiet(chakula) {
+    // console.log(tizi)
+    const updateDiets = clientDiet.find((diet) => diet.id === chakula.id)
+    if (!updateDiets) setClientDiet([...clientDiet, chakula])
+  }
+
   function removeFromClientExercise(tizi) {
     const updateExercises = clientExercise.find((exercise) => exercise.id === tizi.id)
     if (updateExercises) {
@@ -45,6 +52,7 @@ function App() {
       )
     }
   }
+
 
   return (
     <div className="App">
@@ -58,12 +66,12 @@ function App() {
             <Route path="/contacts" element={<Footer />} ></Route>
             <Route path="/login" element={<Login setClient={setClient}/>} ></Route>
             <Route path="/signup" element={<SignUp setClient={setClient}/>} ></Route>
-            <Route path='/dashboard' element={<Dashboard clientExercise={clientExercise} removeFromClientExercise={removeFromClientExercise}/>} />
+            <Route path='/dashboard' element={<Dashboard client={client} clientExercise={clientExercise} removeFromClientExercise={removeFromClientExercise} ClientDiet={clientDiet}/>} />
             <Route path='/admin' element={<Admin />} />
             <Route exact path="/adminclients" element={<Client/>}></Route>
             <Route exact path="/adminequipments" element={<Equipment />}></Route>
             <Route path="/admintrainers" element={<TrainersAdmin />}></Route>
-            <Route exact path="/diet" element={<ClientDiet/>}></Route>
+            <Route exact path="/diet" element={<ClientDiet addToClientDiet={addToClientDiet}/>}></Route>
             <Route exact path="/exercise" element={<Exercise addToClientExercise={addToClientExercise}/>}></Route> 
             <Route exact path="/supplements" element={<Supplements />}></Route> 
 
