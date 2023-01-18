@@ -40,7 +40,7 @@ export default function Excercise({ addToClientExercise }) {
       <div id="trainers" className="exer-height">
         <h1 style={{ textAlign: "center" }}>Excercises</h1>
         {exercises.map((exercise, i) => (
-          <Card key={i} exercise={exercise} addToClientExercise={addToClientExercise}/>
+          <Card key={i} exercise={exercise} handleExercise={addToClientExercise}/>
         ))}
       </div>
     </div>
