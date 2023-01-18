@@ -18,6 +18,7 @@ import ClientDiet from './Components/ClientDiet';
 import Exercise from './Components/Exercise';
 import Supplements from './Components/Supplements';
 
+
 function App() {
   const [client, setClient] = useState(null)
   const [clientExercise, setClientExercise] = useState([])
@@ -58,7 +59,7 @@ function App() {
             <Route path="/contacts" element={<Footer />} ></Route>
             <Route path="/login" element={<Login setClient={setClient}/>} ></Route>
             <Route path="/signup" element={<SignUp setClient={setClient}/>} ></Route>
-            <Route path='/dashboard' element={<Dashboard clientExercise={clientExercise} removeFromClientExercise={removeFromClientExercise}/>} />
+            <Route path='/dashboard'element={ <Dashboard client={client}clientExercise={clientExercise} removeFromClientExercise={removeFromClientExercise}/>}/>
             <Route path='/admin' element={<Admin />} />
             <Route exact path="/adminclients" element={<Client/>}></Route>
             <Route exact path="/adminequipments" element={<Equipment />}></Route>
