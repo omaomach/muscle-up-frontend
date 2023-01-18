@@ -1,5 +1,5 @@
 # 
-<h1 align="center">G</h1>
+<h1 align="center">MuscleUp</h1>
 
 <!-- <p align="center"><img src="https://socialify.git.ci/Aimkeys-Sir/online-comm-frontend/image?descriptionEditable=This%20application%20can%20be%20used%20to%20access%20different%20varieties%20of%20online%20shops%20all%20under%20one%20roof%2C%20helping%20the%20customer%20for%20esier%20comparison%20and%20location%20of%20an%20item&font=Source%20Code%20Pro&language=1&name=1&pattern=Circuit%20Board&stargazers=1&theme=Light"></p> -->
 
