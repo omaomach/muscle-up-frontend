@@ -6,8 +6,35 @@ import ClientDiet from "./ClientDiet";
 import "animate.css";
 import Exercise from "./Exercise";
 import ProgressIcon from "./ProgressIcon";
+import Card from "./Card";
+import DietCard from "./DietCard";
+import SupplementCard from "./SupplementCard";
 
-const Dashboard = () => {
+const Dashboard = ({ client, clientExercise, removeFromClientExercise, clientDiet, removeFromClientDiet, clientSupplement, removeFromClientSupplement }) => {
+
+  const { name, image, weight,level,  target_weight } = client;
+  // console.log(clientExercise)
+  const exer = clientExercise.map((exercise) => {
+    // console.log(exercise)
+    return (
+      <Card key={exercise.id} exercise={exercise} handleExercise={removeFromClientExercise}/>
+    )
+  })
+
+  const food = clientDiet.map((diet) => {
+    return (
+      <DietCard key={diet.id} diet={diet} handleDiet={removeFromClientDiet}/>
+    )
+  })
+
+  const supp = clientSupplement.map((supplement) => {
+    return (
+      <SupplementCard key={supplement.id} supplement={supplement} handleSupplement={removeFromClientSupplement}/>
+    )
+  })
+
+  console.log(client)
+
   return (
     <div className="admin-container">
       <div className="admin-side">
@@ -16,14 +43,15 @@ const Dashboard = () => {
       <div className="client-details">
         <div className="client">
           <div className="dash-img">
+            
             <img
               className="client-img"
-              src="https://images.pexels.com/photos/14711370/pexels-photo-14711370.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+              src={image}
               alt=""
             />
           </div>
           <div className="dash-about">
-            <h2>John Doe</h2>
+            <h2>{name}</h2>
             <p className="about-client">
               {" "}
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -36,12 +64,11 @@ const Dashboard = () => {
         <div className="details-container">
           <div className="stats">
             <div className="client-status">
-              <li>Height:</li>
-              <li>Weight:</li>
-              <li>Age:</li>
+              <li>Weight:{weight}:</li>
+              <li>Level:{level}:</li>
             </div>
             <div className="target-weight">
-              <p>Target Weight:</p>
+              <p>Target Weight: {target_weight}:</p>
             </div>
             <div>
               <Time />
@@ -50,17 +77,28 @@ const Dashboard = () => {
           <div className="daily-progress">
             <div className="my-daily-excercises">
               <h2>My Excercises</h2>
-              <div className=""></div>
+              <div className="exercise-dash">
+              {exer}
+              </div>
+              <h2>My Diet</h2>
+
+              <div className="exercise-dash">
+              {food}
+              </div>
+              <h2>My Supplements</h2>
+
+              <div className="exercise-dash">
+              {supp}
+              </div>
             </div>
 
-            <div className="progress-container">
-              <div className="my-trainer">
-                <h1>vhvhv</h1>
-              </div>
+            {/* <div className="progress-container">
+              
               <div className="progress-bar">
+                <h2 className="header">My Progress</h2>
                 <ProgressIcon percentProgress={0.4} />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

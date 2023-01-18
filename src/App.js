@@ -16,13 +16,17 @@ import Equipment from "./Components/admin/Equipment";
 import TrainersAdmin from "./Components/admin/TrainersAdmin";
 import ClientDiet from './Components/ClientDiet';
 import Exercise from './Components/Exercise';
+import Supplements from './Components/Supplements';
 import NewTrainer from './Components/admin/NewTrainer';
 
 function App() {
+  const [trainers, setTrainers] = useState([]);
+  const [newUpdate, setNewUpdate] = useState();
+  const [addingPerformance, setAddingPerformance] = useState(false);
   const [client, setClient] = useState(null)
-const [trainers, setTrainers] = useState([]);
-const [newUpdate, setNewUpdate] = useState();
-const [addingPerformance, setAddingPerformance] = useState(false);
+  const [clientExercise, setClientExercise] = useState([])
+  const [clientDiet, setClientDiet] = useState([])
+  const [clientSupplement, setClientSupplement] = useState([])
 
   useEffect(() => {
 
@@ -32,6 +36,7 @@ const [addingPerformance, setAddingPerformance] = useState(false);
       }
     });
   }, []);
+
 
   function updateResults(newTrainer) {
 		// if newUpdate is defined update result if not defined add into the array
@@ -49,7 +54,50 @@ const [addingPerformance, setAddingPerformance] = useState(false);
 		}
 		setAddingPerformance(false);
 	}
-	
+
+  function addToClientExercise(tizi) {
+    // console.log(tizi)
+    const updateExercises = clientExercise.find((exercise) => exercise.id === tizi.id)
+    if (!updateExercises) setClientExercise([...clientExercise, tizi])
+  }
+
+  function addToClientDiet(chakula) {
+    // console.log(tizi)
+    const updateDiets = clientDiet.find((diet) => diet.id === chakula.id)
+    if (!updateDiets) setClientDiet([...clientDiet, chakula])
+  }
+
+  function removeFromClientExercise(tizi) {
+    const updateExercises = clientExercise.find((exercise) => exercise.id === tizi.id)
+    if (updateExercises) {
+      setClientExercise(
+        clientExercise.filter((exercises) => exercises.id !== tizi.id)
+      )
+    }
+  }
+
+  function removeFromClientDiet(chakula) {
+    const updateDiets = clientDiet.find((diet) => diet.id === chakula.id)
+    if (updateDiets) {
+      setClientDiet(
+        clientDiet.filter((diets) => diets.id !== chakula.id)
+      )
+    }
+  }
+
+  function addToClientSupplement(sup) {
+    const updateSupplements = clientSupplement.find((supplement) => supplement.id === sup.id)
+    if (!updateSupplements) setClientSupplement([...clientSupplement, sup])
+  }
+
+  function removeFromClientSupplement(sup) {
+    const updateSupplements = clientSupplement.find((supplement) => supplement.id === sup.id)
+    if (updateSupplements) {
+      setClientSupplement(
+        clientSupplement.filter((supplements) => supplements.id !== sup.id)
+      )
+    }
+  }
 
   return (
     <div className="App">
@@ -63,14 +111,15 @@ const [addingPerformance, setAddingPerformance] = useState(false);
             <Route path="/contacts" element={<Footer />} ></Route>
             <Route path="/login" element={<Login setClient={setClient}/>} ></Route>
             <Route path="/signup" element={<SignUp setClient={setClient}/>} ></Route>
-            <Route path='/dashboard' element={<Dashboard />} />
+            <Route path='/dashboard' element={<Dashboard client={client} clientExercise={clientExercise} removeFromClientExercise={removeFromClientExercise} clientDiet={clientDiet} removeFromClientDiet={removeFromClientDiet} clientSupplement={clientSupplement} removeFromClientSupplement={removeFromClientSupplement}/>} />
             <Route path='/admin' element={<Admin />} />
             <Route exact path="/adminclients" element={<Client/>}></Route>
             <Route exact path="/adminequipments" element={<Equipment />}></Route>
-            <Route path="/admintrainers" element={<TrainersAdmin />}></Route>
-            <Route exact path="/diet" element={<ClientDiet/>}></Route>
-            <Route exact path="/exercise" element={<Exercise/>}></Route> 
+            <Route path="/admintrainers" element={<TrainersAdmin />}></Route> 
             <Route exact path="/newTrainer" onSaved={updateResults} defaultData={newUpdate} element={<NewTrainer />} />
+            <Route exact path="/diet" element={<ClientDiet addToClientDiet={addToClientDiet}/>}></Route>
+            <Route exact path="/exercise" element={<Exercise addToClientExercise={addToClientExercise}/>}></Route> 
+            <Route exact path="/supplements" element={<Supplements addToClientSupplement={addToClientSupplement}/>}></Route> 
 
           </Routes>
           <Footer/>

@@ -35,6 +35,7 @@ body {
   
   .sign-in-header {
       margin-top: 90px;
+      font-size: 25px;
       margin-left: auto;
       margin-right: auto;
       color: #000000;
@@ -43,7 +44,7 @@ body {
   }
   
   .sign-in-components {
-    background-color: #173B3F;
+    background-color: #4f976a;
     width: 500px;
     height: 500px;
     margin-left: auto;
@@ -51,7 +52,7 @@ body {
     border-radius: 12px;
     text-align: center;
     margin-top: auto;
-    margin-bottom: auto;
+    margin-bottom: 5%;
   }
   
   .sign-in-components input {
@@ -79,7 +80,7 @@ body {
   }
   
   .login-text {
-      margin-left: 80%;
+  font-size: 25px;
       color: #000000;
       font-style: italic;
       font-family: 'Snell Roundhand, cursive';
@@ -91,4 +92,29 @@ body {
 
 
 
-  
+  @media (min-width: 375px) { 
+    .sign-in-components {
+      background-color: #4f976a;
+      width: 350px;
+      height: 500px;
+      justify-content: center;
+      /* margin-left: auto; */
+      /* margin-right: auto; */
+      border-radius: 12px;
+      text-align: center;
+      margin-top: auto;
+      margin-bottom: 5%;
+    }
+    .main-parent {
+      height: 850px;
+      width: 300px;
+      background-color: #ffffff;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 50px;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: row;
+    }
+    
+  }
