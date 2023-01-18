@@ -8,13 +8,13 @@ import Exercise from "./Exercise";
 import ProgressIcon from "./ProgressIcon";
 import Card from "./Card";
 
-const Dashboard = ({ clientExercise }) => {
+const Dashboard = ({ clientExercise, removeFromClientExercise }) => {
 
   // console.log(clientExercise)
   const exer = clientExercise.map((exercise) => {
     // console.log(exercise)
     return (
-      <Card key={exercise.id} exercise={exercise}/>
+      <Card key={exercise.id} exercise={exercise} handleExercise={removeFromClientExercise}/>
     )
   })
 

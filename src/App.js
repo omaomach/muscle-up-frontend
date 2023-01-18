@@ -31,9 +31,18 @@ function App() {
   }, []);
 
   function addToClientExercise(tizi) {
-    console.log(tizi)
+    // console.log(tizi)
     const updateExercises = clientExercise.find((exercise) => exercise.id === tizi.id)
     if (!updateExercises) setClientExercise([...clientExercise, tizi])
+  }
+
+  function removeFromClientExercise(tizi) {
+    const updateExercises = clientExercise.find((exercise) => exercise.id === tizi.id)
+    if (updateExercises) {
+      setClientExercise(
+        clientExercise.filter((exercises) => exercises.id !== tizi.id)
+      )
+    }
   }
 
   return (
@@ -48,7 +57,7 @@ function App() {
             <Route path="/contacts" element={<Footer />} ></Route>
             <Route path="/login" element={<Login setClient={setClient}/>} ></Route>
             <Route path="/signup" element={<SignUp setClient={setClient}/>} ></Route>
-            <Route path='/dashboard' element={<Dashboard clientExercise={clientExercise}/>} />
+            <Route path='/dashboard' element={<Dashboard clientExercise={clientExercise} removeFromClientExercise={removeFromClientExercise}/>} />
             <Route path='/admin' element={<Admin />} />
             <Route exact path="/adminclients" element={<Client/>}></Route>
             <Route exact path="/adminequipments" element={<Equipment />}></Route>
