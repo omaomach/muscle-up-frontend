@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import DietCard from "./DietCard";
 import Carousel from "react-elastic-carousel";
 import Dashnav from "./Dashnav";
+import "./styles.css"
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
   { width: 550, itemsToShow: 2 },
@@ -36,9 +37,9 @@ export default function ClientDiet({ addToClientDiet }) {
         <Dashnav />
       </div>
       <div id="trainers" className="diet-height">
-        <h1 style={{ textAlign: "center" }}>Diet</h1>
+        {/* <h1 style={{ textAlign: "center" }}>Diet</h1> */}
         {diets.map((diet, i) => (
-          <DietCard key={i} diet={diet} handleClient={addToClientDiet}/>
+          <DietCard key={i} diet={diet} handleDiet={addToClientDiet}/>
         ))}
       </div>
     </div>

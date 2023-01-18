@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Carousel from "react-elastic-carousel";
 import Dashnav from "./Dashnav";
+import SupplementCard from "./SupplementCard";
+import "./Card.css"
+import "./styles.css"
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
   { width: 550, itemsToShow: 2 },
@@ -8,7 +11,7 @@ const breakPoints = [
   { width: 1200, itemsToShow: 4 },
 ];
 
-export default function Supplements() {
+export default function Supplements({ addToClientSupplement }) {
   const [supplements, setSupplements] = useState([]);
   const token = localStorage.getItem("jwt");
 
@@ -27,25 +30,10 @@ export default function Supplements() {
         <Dashnav />
       </div>
       <div id="trainers" className="diet-height">
-        <h1 style={{ textAlign: "center" }}>Supplements</h1>
-        <div className="trainers client-diet">
-          {supplements.map((supplement, i) => (
-            <div key={i} className="card diet-card">
-              <img
-                src={supplement.image}
-                
-                className="card-img"
-              />
-              <div className="card-info">
-                <h3>Name: {supplement.name}</h3>
-
-                <p>
-                  <span className="spec">Amount per session in mm: {supplement.amount}</span> 
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+        {/* <h1 style={{ textAlign: "center" }}>Supplements</h1> */}
+        {supplements.map((supplement, i) => (
+          <SupplementCard key={i} supplement={supplement} handleSupplement={addToClientSupplement}/>
+        ))}
       </div>
     </div>
   );
