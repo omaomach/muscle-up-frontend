@@ -5,10 +5,11 @@ import Button from "./style/Button";
 import { Delete } from "./delete";
 import "./Admin.css";
 
+
 export default function Client() {
   const [clients, setClients] = useState([]);
   useEffect(() => {
-    fetch("http://127.0.0.1:3000/clients")
+    fetch("https://muscleup-production.up.railway.app/clients")
       .then((r) => r.json())
       .then((data) => setClients(data));
   }, []);
@@ -22,6 +23,8 @@ export default function Client() {
       setClients(latestUpdate);
     })
   }
+
+  
 
   return (
     <div className="container">
@@ -54,8 +57,8 @@ export default function Client() {
                   <td>{client.name}</td>
                   <td>{client.email}</td>
                   <td>{client.level}</td>
-                  <td>{client.payment}</td>
-			            <Button color="primary" type="delete" onClick={() =>onDelete(client.id)}>DELETE</Button>
+                  <td>{client.payment_info}</td>
+			            <Button color="primary" paddingTop="20px" type="delete" onClick={() =>onDelete(client.id)}>DELETE</Button>
                 </tr>
               );
             })}

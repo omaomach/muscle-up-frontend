@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 const COLORS = {
   primary: {
-    "--main": "black",
-    "--accent": "white",
+    "--main": "#56C870",
+    "--accent": "black",
   },
   secondary: {
     "--main": "lightgrey",
@@ -30,6 +30,7 @@ const ButtonBase = styled.button`
   border-radius: 6px;
   padding: 8px 16px;
   text-decoration: none;
+  margin-top: 25px;
 `;
 
 const FillButton = styled(ButtonBase)`

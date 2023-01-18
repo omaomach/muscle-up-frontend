@@ -23,7 +23,7 @@ function Login({ setClient }) {
           console.log(data)
           setClient(data.client);
           if (data.client.admin) {
-            navigate("/admin");
+            navigate("/adminclients");
           } else {
             navigate("/dashboard");
           }
