@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import DietCard from "./DietCard";
 import Carousel from "react-elastic-carousel";
 import Dashnav from "./Dashnav";
+import "./Card.css";
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
   { width: 550, itemsToShow: 2 },

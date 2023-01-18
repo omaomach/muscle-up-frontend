@@ -5,7 +5,7 @@ function Card({ exercise, handleExercise }) {
     console.log(exercise)
     return (
         <>
-        <div className="trainers client-diet" onClick={() => handleExercise(exercise)}>
+        <div className=" client-diet" onClick={() => handleExercise(exercise)}>
             <div className="card diet-card">
               <img src={exercise?.exercise_image} className="card-img" />
               <div className="card-info">
