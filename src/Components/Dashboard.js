@@ -65,13 +65,13 @@ const Dashboard = ({ clientExercise, removeFromClientExercise }) => {
               </div>
             </div>
 
-            <div className="progress-container">
+            {/* <div className="progress-container">
               
               <div className="progress-bar">
                 <h2 className="header">My Progress</h2>
                 <ProgressIcon percentProgress={0.4} />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
