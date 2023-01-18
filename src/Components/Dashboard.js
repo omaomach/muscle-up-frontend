@@ -6,8 +6,18 @@ import ClientDiet from "./ClientDiet";
 import "animate.css";
 import Exercise from "./Exercise";
 import ProgressIcon from "./ProgressIcon";
+import Card from "./Card";
 
-const Dashboard = () => {
+const Dashboard = ({ clientExercise }) => {
+
+  // console.log(clientExercise)
+  const exer = clientExercise.map((exercise) => {
+    // console.log(exercise)
+    return (
+      <Card key={exercise.id} exercise={exercise}/>
+    )
+  })
+
   return (
     <div className="admin-container">
       <div className="admin-side">
@@ -50,6 +60,7 @@ const Dashboard = () => {
           <div className="daily-progress">
             <div className="my-daily-excercises">
               <h2>My Excercises</h2>
+              {exer}
               <div className=""></div>
             </div>
 

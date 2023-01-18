@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Card from "./Card";
 import Carousel from "react-elastic-carousel";
 import Dashnav from "./Dashnav";
 import "./styles.css";
@@ -17,7 +18,7 @@ const breakPoints = [
 //   { name: "Davis Wayne", specialty: "CrossFit", imageUrl: "https://images.pexels.com/photos/3253501/pexels-photo-3253501.jpeg?auto=compress&cs=tinysrgb&w=1600" },
 
 // ]
-export default function Excercise() {
+export default function Excercise({ addToClientExercise }) {
   const [exercises, setExercises] = useState([]);
   const token = localStorage.getItem("jwt");
 
@@ -30,6 +31,7 @@ export default function Excercise() {
       .then((r) => r.json())
       .then((data) => setExercises(data));
   }, []);
+
   return (
     <div className="container die-cont">
       <div className="admin-side">
@@ -37,21 +39,9 @@ export default function Excercise() {
       </div>
       <div id="trainers" className="exer-height">
         <h1 style={{ textAlign: "center" }}>Excercises</h1>
-        <div className="trainers client-diet">
-          {exercises.map((exercise, i) => (
-            <div key={i} className="card diet-card">
-              <img src={exercise.exercise_image} className="card-img" />
-              <div className="card-info">
-                <h3>{exercise.name}</h3>
-
-                <p>
-                  <span className="spec">Type of Excercise:</span>{" "}
-                  {exercise.exercise_type}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+        {exercises.map((exercise, i) => (
+          <Card key={i} exercise={exercise} addToClientExercise={addToClientExercise}/>
+        ))}
       </div>
     </div>
   );
