@@ -11,6 +11,8 @@ export default function NavBarClient() {
       <NavLink className="adm-links" style={{ textDecoration: "none" }} to="/dashboard">Dashboard</NavLink>
       <NavLink className="adm-links" style={{ textDecoration: "none" }} to="/diet">Diet</NavLink>
       <NavLink className="adm-links"style={{ textDecoration: "none" }} to="/exercise">Exercise</NavLink>
+      <NavLink className="adm-links"style={{ textDecoration: "none" }} to="/supplements">Supplements</NavLink>
+
     </div>
   </div>
 );
