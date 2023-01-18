@@ -117,6 +117,8 @@
 .my-daily-excercises h2{
     color: #326C3F;
     padding-top:2vh;
+    font-size: 2em;
+
 
 }
  .about-client{
@@ -180,7 +182,7 @@ a:link {
   display:inline-block;
   padding: 20px 0;
 
-  -webkit-background-clip: text;
+  /* -webkit-background-clip: text; */
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
 }
@@ -194,12 +196,24 @@ a:link {
     width: 50%;
 }
 .progress-bar{
-    width: 50%;
+    width: 80%;
+    display:flex;
+    justify-content: center;
+    margin-left: 10%;
+}
+.progress-bar h2{
+    color: #326C3F;
+    margin-right: 5%;
+    font-size: 2em;
 }
 .progress-svg{
 transform: rotateZ(-90deg);
+
 }
 
 .logo{
   color: white;
 }
+/* .admin-container{
+    min-height: 100%;
+} */

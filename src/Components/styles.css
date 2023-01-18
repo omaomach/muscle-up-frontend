@@ -80,6 +80,11 @@
 
 
  }
+ 
+ .exer-height{
+  min-height: 320vh;
+
+ }
  #trainers h1{
   margin-top:5vh;
   font-size: 40px;
@@ -183,4 +188,7 @@ margin-left: 40px;
   box-shadow: 0px 0px 10px #888888;
   margin-bottom: 20px;
   margin-top: 30px;
+}
+.diet-height{
+  min-height: 135vh;
 }

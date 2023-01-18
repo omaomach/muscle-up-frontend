@@ -54,10 +54,9 @@ const Dashboard = () => {
             </div>
 
             <div className="progress-container">
-              <div className="my-trainer">
-                <h1>vhvhv</h1>
-              </div>
+              
               <div className="progress-bar">
+                <h2 className="header">My Progress</h2>
                 <ProgressIcon percentProgress={0.4} />
               </div>
             </div>
