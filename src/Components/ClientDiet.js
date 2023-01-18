@@ -35,10 +35,10 @@ export default function ClientDiet({ addToClientDiet }) {
   }, []);
   return (
     <div className="container">
-      <div className="admin-side">
+      <div className="client-side">
         <Dashnav />
       </div>
-      <div id="trainers" className="diet-height">
+      <div id="trainers" className="exer-height">
         {/* <h1 style={{ textAlign: "center" }}>Diet</h1> */}
         {diets.map((diet, i) => (
           <DietCard key={i} diet={diet} handleDiet={addToClientDiet}/>

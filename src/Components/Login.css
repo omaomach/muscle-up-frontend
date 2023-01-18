@@ -92,7 +92,7 @@ body {
 
 
 
-  @media (min-width: 375px) { 
+  @media (max-width: 500px) { 
     .sign-in-components {
       background-color: #4f976a;
       width: 350px;

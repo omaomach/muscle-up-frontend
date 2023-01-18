@@ -19,7 +19,7 @@ export default function Testimonials() {
   return (
     <div id='testimonials'>
       <h1 style={{ textAlign: "center" }}>Testimonials</h1>
-      <div className="services">
+      <div className="services test-serv">
         
           {services.map((service, i) => (
             <div key={i} className="testimonial">

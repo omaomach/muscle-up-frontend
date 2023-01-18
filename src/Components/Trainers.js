@@ -18,14 +18,14 @@ const trainers = [
 ]
 export default function Trainers() {
   return (
-    <div id='trainers'>
+    <div id='trainers' className='home-trainers-container'>
       <h1 style={{ textAlign: "center" }}>Our Trainers</h1>
-      <div className="trainers">
+      <div className="trainers home-train  ">
         <Carousel breakPoints={breakPoints} >
           {trainers.map((trainer, i) => (
-            <div key={i} className="card">
+            <div key={i} className="card home-trainers">
               <img src={trainer.imageUrl} alt={`${trainer.name} - ${trainer.specialty}`} className="card-img" />
-              <div className="card-info">
+              <div className="card-info media-train">
                 <h3>{trainer.name}</h3>
                 <p><span className='spec'>Specialty:</span>  {trainer.specialty}</p>
               </div>
