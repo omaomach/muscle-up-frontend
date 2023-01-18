@@ -60,8 +60,9 @@ const Dashboard = ({ clientExercise, removeFromClientExercise }) => {
           <div className="daily-progress">
             <div className="my-daily-excercises">
               <h2>My Excercises</h2>
+              <div className="exercise-dash">
               {exer}
-              <div className=""></div>
+              </div>
             </div>
 
             <div className="progress-container">

@@ -111,7 +111,7 @@
     border-radius: 5px;
     animation: bounceInLeft;
     animation-duration: 2s;
-    height: 50vh;
+    height: 80vh;
  
 }
 .my-daily-excercises h2{
@@ -119,8 +119,15 @@
     padding-top:2vh;
     font-size: 2em;
 
-
 }
+
+.exercise-dash {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    justify-content: center;
+}
+
  .about-client{
    color: black;
    text-align: justify;
