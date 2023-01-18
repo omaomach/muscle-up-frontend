@@ -6,8 +6,18 @@ import ClientDiet from "./ClientDiet";
 import "animate.css";
 import Exercise from "./Exercise";
 import ProgressIcon from "./ProgressIcon";
+import Card from "./Card";
 
-const Dashboard = () => {
+const Dashboard = ({ clientExercise, removeFromClientExercise }) => {
+
+  // console.log(clientExercise)
+  const exer = clientExercise.map((exercise) => {
+    // console.log(exercise)
+    return (
+      <Card key={exercise.id} exercise={exercise} handleExercise={removeFromClientExercise}/>
+    )
+  })
+
   return (
     <div className="admin-container">
       <div className="admin-side">
@@ -50,18 +60,28 @@ const Dashboard = () => {
           <div className="daily-progress">
             <div className="my-daily-excercises">
               <h2>My Excercises</h2>
-              <div className=""></div>
+              <div className="exercise-dash">
+              {exer}
+              </div>
+              <h2>My Diet</h2>
+
+              <div className="exercise-dash">
+              {exer}
+              </div>
+              <h2>My Supplements</h2>
+
+              <div className="exercise-dash">
+              {exer}
+              </div>
             </div>
 
-            <div className="progress-container">
-              <div className="my-trainer">
-                <h1>vhvhv</h1>
-              </div>
+            {/* <div className="progress-container">
+              
               <div className="progress-bar">
-                <p>{0.4 * 100}%</p>
+                <h2 className="header">My Progress</h2>
                 <ProgressIcon percentProgress={0.4} />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

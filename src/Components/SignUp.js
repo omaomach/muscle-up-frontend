@@ -8,6 +8,10 @@ function SignUp({ setClient }) {
   const [name, setUsername] = useState("");
   const [phone_number, setPhone_Number] = useState("");
   const [email, setEmail] = useState("");
+  const [image, setImage] = useState("");
+  const [weight, setWeight] = useState("");
+  const [target_weight, setTarget_Weight] = useState("");
+  const [level, setLevel] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
 
@@ -23,6 +27,10 @@ function SignUp({ setClient }) {
         name,
         phone_number,
         email,
+        image,
+        weight,
+        target_weight,
+        level,
         password,
         password_confirmation: passwordConfirmation,
       }),
@@ -72,6 +80,38 @@ function SignUp({ setClient }) {
                 placeholder="Phone Number"
                 required
                 onChange={(e) => setPhone_Number(e.target.value)}
+              />
+              <input
+                type="text"
+                id="image"
+                className="avatar"
+                placeholder="Avatar"
+                required
+                onChange={(e) => setImage(e.target.value)}
+              />
+              <input
+                type="number"
+                id="weight"
+                className="weight"
+                placeholder="Your Weight in Kg"
+                required
+                onChange={(e) => setWeight(e.target.value)}
+              />
+              <input
+                type="number"
+                id="target_weight"
+                className="target_weight"
+                placeholder="Your Target Weight"
+                required
+                onChange={(e) => setTarget_Weight(e.target.value)}
+              />
+              <input
+                type="text"
+                id="level"
+                className="level"
+                placeholder="Your Gym Level"
+                required
+                onChange={(e) => setLevel(e.target.value)}
               />
               <input
                 type="password"

@@ -17,7 +17,7 @@ body {
 .right {
   width: 1025px;
   height: 850px;
-  background-color: lightgrey;
+  background-color: #173B3F;
   margin-left: auto;
   margin-right: auto;
   border-radius: 12px;
@@ -50,8 +50,8 @@ body {
 
 .sign-up-components {
   background-color: #173B3F ;
-  width: 500px;
-  height: 500px;
+  width: 800px;
+  height: 900px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 12px;

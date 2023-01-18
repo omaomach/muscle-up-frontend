@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import AdminSidenav from "./AdminSideNav";
+import styled from "styled-components";
+import Button from "./style/Button";
+import { tDelete } from "./delete";
 import "./Admin.css";
 import "./Client.css"
 
@@ -16,6 +19,17 @@ export default function TrainersAdmin() {
       .then((r) => r.json())
       .then((data) => setTrainers(data));
   }, []);
+
+  function onDelete(id){
+    tDelete(id).then(resp => {
+      const index = trainers.findIndex(r => r.id === id);
+      console.log(index)
+      let latestUpdate = [...trainers];
+      latestUpdate.splice(index, 1);
+      setTrainers(latestUpdate);
+    })
+  }
+
 
   return (
     <div className="container">
@@ -50,6 +64,7 @@ export default function TrainersAdmin() {
                   <td>{trainer.phone_number}</td>
                   <td>{trainer.email}</td>
                   <td>{trainer.age}</td>
+                  <Button color="primary" type="delete" onClick={() =>onDelete(trainer.id)}>DELETE</Button>
                 </tr>
               );
             })}
