@@ -3,6 +3,7 @@ import Card from "./Card";
 import Carousel from "react-elastic-carousel";
 import Dashnav from "./Dashnav";
 import "./styles.css";
+import "./Card.css"
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
   { width: 550, itemsToShow: 2 },
@@ -37,8 +38,9 @@ export default function Excercise({ addToClientExercise }) {
       <div className="admin-side">
         <Dashnav />
       </div>
+       
       <div id="trainers" className="exer-height">
-        <h1 style={{ textAlign: "center" }}>Excercises</h1>
+      {/* <h1 style={{ textAlign: "center" }}>Excercises</h1> */}
         {exercises.map((exercise, i) => (
           <Card key={i} exercise={exercise} handleExercise={addToClientExercise}/>
         ))}
