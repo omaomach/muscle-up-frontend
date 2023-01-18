@@ -17,22 +17,43 @@ import TrainersAdmin from "./Components/admin/TrainersAdmin";
 import ClientDiet from './Components/ClientDiet';
 import Exercise from './Components/Exercise';
 import Supplements from './Components/Supplements';
-
+import NewTrainer from './Components/admin/NewTrainer';
 
 function App() {
+  const [trainers, setTrainers] = useState([]);
+  const [newUpdate, setNewUpdate] = useState();
+  const [addingPerformance, setAddingPerformance] = useState(false);
   const [client, setClient] = useState(null)
   const [clientExercise, setClientExercise] = useState([])
   const [clientDiet, setClientDiet] = useState([])
   const [clientSupplement, setClientSupplement] = useState([])
 
-
   useEffect(() => {
-    fetch("http://127.0.0.1:3000/profile").then((response) => {
+
+    fetch("https://muscleup-production.up.railway.app/profile").then((response) => {
       if (response.ok) {
         response.json().then((client) => setClient(client));
       }
     });
   }, []);
+
+
+  function updateResults(newTrainer) {
+		// if newUpdate is defined update result if not defined add into the array
+		if (newUpdate) {
+			const index = trainers.findIndex(r => r.id === newTrainer.id);
+      console.log(trainers)
+			console.log(index)
+			// updating form using index
+			let latestUpdate = [...trainers];
+			latestUpdate[index] = newTrainer;
+			setTrainers(latestUpdate);
+
+		} else {
+			setTrainers([...trainers, newUpdate]);
+		}
+		setAddingPerformance(false);
+	}
 
   function addToClientExercise(tizi) {
     // console.log(tizi)
@@ -78,9 +99,6 @@ function App() {
     }
   }
 
-  
-
-
   return (
     <div className="App">
       <div>
@@ -97,11 +115,11 @@ function App() {
             <Route path='/admin' element={<Admin />} />
             <Route exact path="/adminclients" element={<Client/>}></Route>
             <Route exact path="/adminequipments" element={<Equipment />}></Route>
-            <Route path="/admintrainers" element={<TrainersAdmin />}></Route>
+            <Route path="/admintrainers" element={<TrainersAdmin />}></Route> 
+            <Route exact path="/newTrainer" onSaved={updateResults} defaultData={newUpdate} element={<NewTrainer />} />
             <Route exact path="/diet" element={<ClientDiet addToClientDiet={addToClientDiet}/>}></Route>
             <Route exact path="/exercise" element={<Exercise addToClientExercise={addToClientExercise}/>}></Route> 
             <Route exact path="/supplements" element={<Supplements addToClientSupplement={addToClientSupplement}/>}></Route> 
-
 
           </Routes>
           <Footer/>

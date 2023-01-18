@@ -1,5 +1,7 @@
 import React from "react";
 import "./AdminSideNav.css";
+import { Link } from "react-router-dom";
+import Button from "./style/Button";
 import NavBaradmin from "./NavBaradmin";
 import { NavLink, useNavigate } from 'react-router-dom'
 
@@ -22,7 +24,6 @@ const AdminSidenav = () => {
 
       </div>
       <NavBaradmin/>
-
       <NavLink to="/login"><button className="admin-btn" type="submit">Logout</button></NavLink>
     </div>
   );

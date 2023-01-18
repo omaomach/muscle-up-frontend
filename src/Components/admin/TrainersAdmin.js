@@ -5,10 +5,14 @@ import Button from "./style/Button";
 import { tDelete } from "./delete";
 import "./Admin.css";
 import "./Client.css"
+import newTrainer from "./NewTrainer";
+import { NavLink } from "react-router-dom";
 
 export default function TrainersAdmin() {
   const [trainers, setTrainers] = useState([]);
   const token = localStorage.getItem("jwt")
+  const [newUpdate, setNewUpdate] = useState();
+  const [addingPerformance, setAddingPerformance] = useState(false);
 
   useEffect(() => {
     fetch("https://muscleup-production.up.railway.app/trainers", {
@@ -30,11 +34,29 @@ export default function TrainersAdmin() {
     })
   }
 
+  function updateResults(newTrainer) {
+		// if newUpdate is defined update result if not defined add into the array
+		if (newUpdate) {
+			const index = trainers.findIndex(r => r.id === newTrainer.id);
+      console.log(trainers)
+			console.log(index)
+			// updating form using index
+			let latestUpdate = [...trainers];
+			latestUpdate[index] = newTrainer;
+			setTrainers(latestUpdate);
+
+		} else {
+			setTrainers([...trainers, newUpdate]);
+		}
+		setAddingPerformance(false);
+	}
+	
 
   return (
     <div className="container">
       <div className="admin-side">
-        <AdminSidenav />
+      <AdminSidenav />
+       
       </div>
 
       <div className="table">
@@ -70,6 +92,9 @@ export default function TrainersAdmin() {
             })}
           </tbody>
         </table>
+        <div>
+        <NavLink className="adm-links"style={{ textDecoration: "none" }} to="/newTrainer">Add Trainer</NavLink>
+        </div>
       </div>
     </div>
   );
