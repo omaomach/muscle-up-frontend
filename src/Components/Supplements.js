@@ -40,7 +40,7 @@ export default function Supplements() {
                 <h3>Name: {supplement.name}</h3>
 
                 <p>
-                  <span className="spec">Amount: {supplement.amount}</span> 
+                  <span className="spec">Amount per session in mm: {supplement.amount}</span> 
                 </p>
               </div>
             </div>
