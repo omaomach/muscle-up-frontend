@@ -34,8 +34,8 @@ export default function Excercise({ addToClientExercise }) {
   }, []);
 
   return (
-    <div className="container die-cont">
-      <div className="admin-side">
+    <div className="container exer-cont">
+      <div className="client-side">
         <Dashnav />
       </div>
        

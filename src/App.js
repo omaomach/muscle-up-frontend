@@ -18,6 +18,7 @@ import ClientDiet from './Components/ClientDiet';
 import Exercise from './Components/Exercise';
 import Supplements from './Components/Supplements';
 
+
 function App() {
   const [client, setClient] = useState(null)
   const [clientExercise, setClientExercise] = useState([])

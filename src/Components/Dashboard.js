@@ -12,6 +12,7 @@ import SupplementCard from "./SupplementCard";
 
 const Dashboard = ({ client, clientExercise, removeFromClientExercise, clientDiet, removeFromClientDiet, clientSupplement, removeFromClientSupplement }) => {
 
+  const { name, image, weight,level,  target_weight } = client;
   // console.log(clientExercise)
   const exer = clientExercise.map((exercise) => {
     // console.log(exercise)
@@ -42,14 +43,15 @@ const Dashboard = ({ client, clientExercise, removeFromClientExercise, clientDie
       <div className="client-details">
         <div className="client">
           <div className="dash-img">
+            
             <img
               className="client-img"
-              src="https://images.pexels.com/photos/14711370/pexels-photo-14711370.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+              src={image}
               alt=""
             />
           </div>
           <div className="dash-about">
-            <h2>John Doe</h2>
+            <h2>{name}</h2>
             <p className="about-client">
               {" "}
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -62,12 +64,11 @@ const Dashboard = ({ client, clientExercise, removeFromClientExercise, clientDie
         <div className="details-container">
           <div className="stats">
             <div className="client-status">
-              <li>Height:</li>
-              <li>Weight:</li>
-              <li>Age:</li>
+              <li>Weight:{weight}:</li>
+              <li>Level:{level}:</li>
             </div>
             <div className="target-weight">
-              <p>Target Weight:</p>
+              <p>Target Weight: {target_weight}:</p>
             </div>
             <div>
               <Time />

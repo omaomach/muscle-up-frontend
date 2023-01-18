@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import "./SignUp.css";
 import { NavLink, useNavigate } from "react-router-dom";
 import NavBar from "./NavBar";
+// import Dashboard from "./Dashboard";
 
 function SignUp({ setClient }) {
   const navigate = useNavigate();
+  const [user, setUser] = useState({});
   const [name, setUsername] = useState("");
   const [phone_number, setPhone_Number] = useState("");
   const [email, setEmail] = useState("");
@@ -37,8 +39,9 @@ function SignUp({ setClient }) {
     }).then((r) => {
       if (r.ok) {
         r.json().then((data) => {
+          setUser(data.client);
           setClient(data.client);
-          navigate("/dashboard");
+          navigate("/dashboard" , { state: { user: data.client } });
           localStorage.setItem("jwt", data.jwt);
         });
       }
@@ -50,11 +53,12 @@ function SignUp({ setClient }) {
 
     <NavBar />
 
+
       <div className="main-parent">
         <div className="right">
           <div className="sign-up-components">
             <div className="sign-up-header">
-              <h3>Hello, please sign up to access muscleUp</h3>
+              <h3>Hello, please Sign Up</h3>
             </div>
             <form onSubmit={handleSubmit}>
               <input
@@ -142,6 +146,7 @@ function SignUp({ setClient }) {
         </div>
       </div>
     </>
+   
   );
 }
 

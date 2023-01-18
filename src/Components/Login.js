@@ -42,7 +42,7 @@ function Login({ setClient }) {
         <div className="right">
           <div className="sign-in-components">
             <div className="sign-in-header">
-              <h3>Hello, please login to access Inkmasters</h3>
+              <h3>Login</h3>
             </div>
             <form onSubmit={handleSubmit}>
               <input
@@ -69,8 +69,9 @@ function Login({ setClient }) {
             </form>
           </div>
           <div className="login-text">
+          <p>Don't have an account? </p>
             <NavLink to="/signup">
-              <p>Already a member? Sign Up</p>
+              Sign Up
             </NavLink>
           </div>
         </div>
