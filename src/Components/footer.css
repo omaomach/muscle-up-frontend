@@ -109,4 +109,22 @@
     font-size: 17px;
     font-weight: 400;
   }
+  @media (max-width: 500px) { 
+    .footer {
+      display: flex;
+      flex-direction: row;
+      height: 15vh;
+      font-family: 'Roboto', sans-serif;
+      
   
+    }
+    footer {
+      display: flex;
+      /* flex-direction: column; */
+      background-color:#173B3F ;
+      margin-top: 130vh;
+      padding-bottom: 5vh;
+      padding-top: 5vh;
+    }
+    
+  }

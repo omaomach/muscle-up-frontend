@@ -26,10 +26,10 @@ export default function Supplements({ addToClientSupplement }) {
   }, []);
   return (
     <div className="container">
-      <div className="admin-side">
+      <div className="client-side">
         <Dashnav />
       </div>
-      <div id="trainers" className="diet-height">
+      <div id="trainers" className="exer-height">
         {/* <h1 style={{ textAlign: "center" }}>Supplements</h1> */}
         {supplements.map((supplement, i) => (
           <SupplementCard key={i} supplement={supplement} handleSupplement={addToClientSupplement}/>
