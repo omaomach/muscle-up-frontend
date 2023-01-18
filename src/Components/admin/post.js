@@ -2,7 +2,7 @@
 export function Post(trainer){
 	const token = localStorage.getItem("jwt")
 	console.log(trainer);
-	return fetch('http://127.0.0.1:3000/trainers',{
+	return fetch('https://muscleup-production.up.railway.app/trainers',{
 		method : "POST",
 		body: JSON.stringify(trainer),
 		headers:{
@@ -14,7 +14,7 @@ export function Post(trainer){
 }
 
 export function Patch(trainer){
-	return fetch(`http://127.0.0.1:3000/trainers/${trainer.id}` ,{
+	return fetch(`https://muscleup-production.up.railway.app/trainers/${trainer.id}` ,{
 		method : "PATCH",
 		body: JSON.stringify(trainer),
 		headers:{

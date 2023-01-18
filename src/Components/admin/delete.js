@@ -11,7 +11,7 @@ export function Delete(id){
 
 export function tDelete(id){
 	const token = localStorage.getItem("jwt");
-	return fetch(`http://127.0.0.1:3000/trainers/${id}` ,{
+	return fetch(`https://muscleup-production.up.railway.app/trainers/${id}` ,{
 		method : "DELETE",
 		headers:{
 			"Content-Type": "application/json",
