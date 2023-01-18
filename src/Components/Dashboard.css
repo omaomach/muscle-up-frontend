@@ -119,8 +119,15 @@
     padding-top:2vh;
     font-size: 2em;
 
-
 }
+
+.exercise-dash {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    justify-content: center;
+}
+
  .about-client{
    color: black;
    text-align: justify;
