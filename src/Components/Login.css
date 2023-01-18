@@ -92,4 +92,29 @@ body {
 
 
 
-  
+  @media (min-width: 375px) { 
+    .sign-in-components {
+      background-color: #4f976a;
+      width: 350px;
+      height: 500px;
+      justify-content: center;
+      /* margin-left: auto; */
+      /* margin-right: auto; */
+      border-radius: 12px;
+      text-align: center;
+      margin-top: auto;
+      margin-bottom: 5%;
+    }
+    .main-parent {
+      height: 850px;
+      width: 300px;
+      background-color: #ffffff;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 50px;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: row;
+    }
+    
+  }

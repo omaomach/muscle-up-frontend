@@ -312,3 +312,10 @@ textarea {
   width:42%;
   margin-left: 8%;
 }
+
+
+
+/* media queries */
+@media (min-width: 1024px) { 
+  
+}
