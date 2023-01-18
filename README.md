@@ -1,72 +1,87 @@
-# Getting Started with Create React App
+# 
+<h1 align="center">G</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- <p align="center"><img src="https://socialify.git.ci/Aimkeys-Sir/online-comm-frontend/image?descriptionEditable=This%20application%20can%20be%20used%20to%20access%20different%20varieties%20of%20online%20shops%20all%20under%20one%20roof%2C%20helping%20the%20customer%20for%20esier%20comparison%20and%20location%20of%20an%20item&font=Source%20Code%20Pro&language=1&name=1&pattern=Circuit%20Board&stargazers=1&theme=Light"></p> -->
 
-## Available Scripts
+This application can be used to manage a gym center.The owner who is considered as the admin can track his trainers,equipments and clients enrolled in the gym.Clients are able to access workouts,diets and details about their personal trainer.The user can be able to view the landing page and see what the gym offers.
 
-In the project directory, you can run:
 
-### `npm start`
+<!-- <p align="center"><img src="https://img.shields.io/github/issues/Aimkeys-Sir/online-comm-frontend" alt="shields"><img src="https://img.shields.io/github/forks/Aimkeys-Sir/online-comm-frontend" alt="shields"><img src="https://img.shields.io/github/stars/Aimkeys-Sir/online-comm-frontend" alt="shields"><img src="https://img.shields.io/github/license/Aimkeys-Sir/online-comm-frontend" alt="shields"></p> -->
+
+<h2>Contributed by;</h2>
+<h3>Caleb Muthiira</h3>
+<h3>Grace Kyalo</h3>
+<h3>Lilian Wangechi</h3>
+<h3>Omao Machoka</h3>
+<h3>Roy Kiplagat</h3>
+
+
+
+<h2>🚀 Demo</h2>
+
+[https:](https:)
+
+<h2>Project Screenshots:</h2>
+
+<p align="center"><img src="https://github.com/omaomach/muscle-up-frontend/blob/main/Screenshot%20from%202022-11-25%2015-24-58.png?raw=true"></p>
+
+<h2>🧐 Features</h2>
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:4000](http://localhost:4000) to view it in the browser.
+Here're some of the project's best features:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+*   News about various categories delivered in form of stories
+*   New from over 9 distinct categories
 
-### `npm test`
+<h2>Requirements:</h2>
+ * Access to a computer, laptop or phone 
+ * Access to a computer, laptop or phone
+ * Ruby v.2.7.4
+ * Rails v.7.0.4
+ * NVM installed in you machine
+ * Access to the internet <br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h2>🛠️ Installation Steps:</h2>
 
-### `npm run build`
+ *****
+ * Clone this repo using this command : git clone "https://github.com/omaomach/muscle-up-frontend/"
+ * Unzip the downloaded files in a folder of choice.
+ * Open the index file from the zipped file wih browser of choice but prefferably google chrome.
+ * Open the index file from the zipped file wih browser of choice but preferably google chrome.
+ * Run
+    - npm install --prefix client
+    - bundle install
+    - rails db:migrate
+    - rails db:seed
+ *****
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<h2>🍰 Contribution Guidelines:</h2>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Please contribute using GitHub Flow. Create a branch add commits and open a pull request.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<h2>💻 Built with</h2>
 
-### `npm run eject`
+Technologies used in the project:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+ * Ruby
+    - Rails
+ * Javascript
+    - REACT
+ * SQL/PostreSQL
+ * HTML
+ * CSS
+ * CSS 
+    - Bootstrap
+    - Tailwind
+    - Material-UI
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<h2>🛡️ License:</h2>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This project is licensed under the MIT License
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<h2>💖Like our work?</h2>
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# muscle-up-frontend
-# muscle-up-frontend
+Please leave a star if you like the project

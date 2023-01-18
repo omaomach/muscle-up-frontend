@@ -58,6 +58,7 @@ const Dashboard = () => {
                 <h1>vhvhv</h1>
               </div>
               <div className="progress-bar">
+                <p>{0.4 * 100}%</p>
                 <ProgressIcon percentProgress={0.4} />
               </div>
             </div>
