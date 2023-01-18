@@ -19,6 +19,7 @@ import Exercise from './Components/Exercise';
 
 function App() {
   const [client, setClient] = useState(null)
+  const [clientExercise, setClientExercise] = useState([])
 
 
   useEffect(() => {
@@ -28,6 +29,12 @@ function App() {
       }
     });
   }, []);
+
+  function addToClientExercise(tizi) {
+    console.log(tizi)
+    const updateExercises = clientExercise.find((exercise) => exercise.id === tizi.id)
+    if (!updateExercises) setClientExercise([...clientExercise, tizi])
+  }
 
   return (
     <div className="App">
@@ -41,13 +48,13 @@ function App() {
             <Route path="/contacts" element={<Footer />} ></Route>
             <Route path="/login" element={<Login setClient={setClient}/>} ></Route>
             <Route path="/signup" element={<SignUp setClient={setClient}/>} ></Route>
-            <Route path='/dashboard' element={<Dashboard />} />
+            <Route path='/dashboard' element={<Dashboard clientExercise={clientExercise}/>} />
             <Route path='/admin' element={<Admin />} />
             <Route exact path="/adminclients" element={<Client/>}></Route>
             <Route exact path="/adminequipments" element={<Equipment />}></Route>
             <Route path="/admintrainers" element={<TrainersAdmin />}></Route>
             <Route exact path="/diet" element={<ClientDiet/>}></Route>
-            <Route exact path="/exercise" element={<Exercise/>}></Route> 
+            <Route exact path="/exercise" element={<Exercise addToClientExercise={addToClientExercise}/>}></Route> 
 
 
           </Routes>
