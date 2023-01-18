@@ -63,6 +63,16 @@ const Dashboard = ({ clientExercise, removeFromClientExercise }) => {
               <div className="exercise-dash">
               {exer}
               </div>
+              <h2>My Diet</h2>
+
+              <div className="exercise-dash">
+              {exer}
+              </div>
+              <h2>My Supplements</h2>
+
+              <div className="exercise-dash">
+              {exer}
+              </div>
             </div>
 
             {/* <div className="progress-container">

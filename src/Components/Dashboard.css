@@ -108,10 +108,12 @@
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
     margin-left: 3%;
     margin-right: 3%;
+    margin-top: 3%;
     border-radius: 5px;
     animation: bounceInLeft;
     animation-duration: 2s;
     height: 80vh;
+    overflow-y: scroll;
  
 }
 .my-daily-excercises h2{
@@ -126,6 +128,10 @@
     flex-direction: row;
     overflow-x: scroll;
     justify-content: center;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    width: 90%;
+    margin-left: 5%;
+
 }
 
  .about-client{
