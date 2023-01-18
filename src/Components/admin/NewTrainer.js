@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useHistory } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import Button from "./style/Button";
 import Label from "./style/Label";
@@ -9,7 +9,7 @@ import { Post, Patch } from "./post";
 import { useNavigate } from "react-router-dom";
 
 
-export default function newTrainer({defaultData}) {
+export default function NewTrainer({defaultData}) {
 	// const history = useHistory();
 	const navigate = useNavigate();
 	const [formData, setFormData] = useState({
@@ -55,7 +55,7 @@ export default function newTrainer({defaultData}) {
 		console.log(index)
 		// updating form using index
 		let latestUpdate = [...trainers];
-		latestUpdate[index] = newTrainer;
+		latestUpdate[index] = NewTrainer;
 		setTrainers(latestUpdate);
 
 	} else {

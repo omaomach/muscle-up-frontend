@@ -12,7 +12,7 @@ function SupplementCard({ supplement, handleSupplement }) {
 
               <p>
                 <span className="spec">
-                  Amount per session in mm: {supplement?.supplement_type}
+                  Amount per session in mm: {supplement?.amount}
                 </span>
               </p>
             </div>
