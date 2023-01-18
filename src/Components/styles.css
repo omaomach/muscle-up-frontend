@@ -82,7 +82,7 @@
  }
  
  .exer-height{
-  min-height: 320vh;
+  height: 113vh;
 
  }
  #trainers h1{
@@ -190,5 +190,12 @@ margin-left: 40px;
   margin-top: 30px;
 }
 .diet-height{
-  min-height: 135vh;
+  height: 113vh;
+  overflow-y: scroll;
+}
+.exer-cont{
+  width: 100%;
+}
+.client-side{
+  width:25%
 }
