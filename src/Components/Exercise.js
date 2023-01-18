@@ -37,10 +37,12 @@ export default function Excercise({ addToClientExercise }) {
       <div className="admin-side">
         <Dashnav />
       </div>
-      <div id="trainers" className="exer-height">
+      <div id="trainer-card" className="exer-height">
         <h1 style={{ textAlign: "center" }}>Excercises</h1>
         {exercises.map((exercise, i) => (
-          <Card key={i} exercise={exercise} addToClientExercise={addToClientExercise}/>
+ <div className="exer-card">
+          <Card className="card-cont" key={i} exercise={exercise} addToClientExercise={addToClientExercise}/>
+          </div>
         ))}
       </div>
     </div>

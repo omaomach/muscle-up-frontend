@@ -81,10 +81,10 @@
 
  }
  
- .exer-height{
-  min-height: 320vh;
+ /* .exer-height{
+  min-height: 10vh;
 
- }
+ } */
  #trainers h1{
   margin-top:5vh;
   font-size: 40px;
@@ -180,8 +180,8 @@ margin-left: 40px;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  width: 400px;
-  height: 55vh;
+  width: 70%;
+  height: 60%;
   margin: 0 15px;
   border-radius: 12px;
   background-color: #EDEFF1;
@@ -191,4 +191,14 @@ margin-left: 40px;
 }
 .diet-height{
   min-height: 135vh;
+}
+
+.die-cont{
+  width: 100%;
+}
+
+.exer-height{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
 }
