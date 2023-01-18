@@ -8,7 +8,6 @@ import Exercise from "./Exercise";
 import ProgressIcon from "./ProgressIcon";
 import Card from "./Card";
 
-
 const Dashboard = ({ client, clientExercise, removeFromClientExercise }) => {
 
   const { name, image, weight,level,  target_weight } = client;
@@ -19,6 +18,8 @@ const Dashboard = ({ client, clientExercise, removeFromClientExercise }) => {
       <Card key={exercise.id} exercise={exercise} handleExercise={removeFromClientExercise}/>
     )
   })
+
+  console.log(client)
 
   return (
     <div className="admin-container">
@@ -62,6 +63,16 @@ const Dashboard = ({ client, clientExercise, removeFromClientExercise }) => {
           <div className="daily-progress">
             <div className="my-daily-excercises">
               <h2>My Excercises</h2>
+              <div className="exercise-dash">
+              {exer}
+              </div>
+              <h2>My Diet</h2>
+
+              <div className="exercise-dash">
+              {exer}
+              </div>
+              <h2>My Supplements</h2>
+
               <div className="exercise-dash">
               {exer}
               </div>
