@@ -60,17 +60,20 @@ const Dashboard = ({ clientExercise, removeFromClientExercise }) => {
           <div className="daily-progress">
             <div className="my-daily-excercises">
               <h2>My Excercises</h2>
+              <div className="exer-card">
               {exer}
+                </div>
+             
               <div className=""></div>
             </div>
 
-            <div className="progress-container">
+            {/* <div className="progress-container">
               
               <div className="progress-bar">
                 <h2 className="header">My Progress</h2>
                 <ProgressIcon percentProgress={0.4} />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

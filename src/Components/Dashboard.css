@@ -111,7 +111,7 @@
     border-radius: 5px;
     animation: bounceInLeft;
     animation-duration: 2s;
-    height: 50vh;
+    height: 80vh;
  
 }
 .my-daily-excercises h2{
@@ -217,3 +217,8 @@ transform: rotateZ(-90deg);
 /* .admin-container{
     min-height: 100%;
 } */
+.exer-card{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
