@@ -1,4 +1,6 @@
 import React from "react";
+import "./styles.css";
+import "./Card.css"
 
 function DietCard({ diet, handleDiet }) {
   return (

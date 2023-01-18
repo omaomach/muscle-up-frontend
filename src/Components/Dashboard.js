@@ -7,8 +7,10 @@ import "animate.css";
 import Exercise from "./Exercise";
 import ProgressIcon from "./ProgressIcon";
 import Card from "./Card";
+import DietCard from "./DietCard";
+import SupplementCard from "./SupplementCard";
 
-const Dashboard = ({ client, clientExercise, removeFromClientExercise }) => {
+const Dashboard = ({ client, clientExercise, removeFromClientExercise, clientDiet, removeFromClientDiet, clientSupplement, removeFromClientSupplement }) => {
 
   const { name, image, weight,level,  target_weight } = client;
   // console.log(clientExercise)
@@ -16,6 +18,18 @@ const Dashboard = ({ client, clientExercise, removeFromClientExercise }) => {
     // console.log(exercise)
     return (
       <Card key={exercise.id} exercise={exercise} handleExercise={removeFromClientExercise}/>
+    )
+  })
+
+  const food = clientDiet.map((diet) => {
+    return (
+      <DietCard key={diet.id} diet={diet} handleDiet={removeFromClientDiet}/>
+    )
+  })
+
+  const supp = clientSupplement.map((supplement) => {
+    return (
+      <SupplementCard key={supplement.id} supplement={supplement} handleSupplement={removeFromClientSupplement}/>
     )
   })
 
@@ -69,12 +83,12 @@ const Dashboard = ({ client, clientExercise, removeFromClientExercise }) => {
               <h2>My Diet</h2>
 
               <div className="exercise-dash">
-              {exer}
+              {food}
               </div>
               <h2>My Supplements</h2>
 
               <div className="exercise-dash">
-              {exer}
+              {supp}
               </div>
             </div>
 

@@ -23,6 +23,7 @@ function App() {
   const [client, setClient] = useState(null)
   const [clientExercise, setClientExercise] = useState([])
   const [clientDiet, setClientDiet] = useState([])
+  const [clientSupplement, setClientSupplement] = useState([])
 
 
   useEffect(() => {
@@ -54,6 +55,31 @@ function App() {
     }
   }
 
+  function removeFromClientDiet(chakula) {
+    const updateDiets = clientDiet.find((diet) => diet.id === chakula.id)
+    if (updateDiets) {
+      setClientDiet(
+        clientDiet.filter((diets) => diets.id !== chakula.id)
+      )
+    }
+  }
+
+  function addToClientSupplement(sup) {
+    const updateSupplements = clientSupplement.find((supplement) => supplement.id === sup.id)
+    if (!updateSupplements) setClientSupplement([...clientSupplement, sup])
+  }
+
+  function removeFromClientSupplement(sup) {
+    const updateSupplements = clientSupplement.find((supplement) => supplement.id === sup.id)
+    if (updateSupplements) {
+      setClientSupplement(
+        clientSupplement.filter((supplements) => supplements.id !== sup.id)
+      )
+    }
+  }
+
+  
+
 
   return (
     <div className="App">
@@ -67,14 +93,14 @@ function App() {
             <Route path="/contacts" element={<Footer />} ></Route>
             <Route path="/login" element={<Login setClient={setClient}/>} ></Route>
             <Route path="/signup" element={<SignUp setClient={setClient}/>} ></Route>
-            <Route path='/dashboard' element={<Dashboard client={client} clientExercise={clientExercise} removeFromClientExercise={removeFromClientExercise} ClientDiet={clientDiet}/>} />
+            <Route path='/dashboard' element={<Dashboard client={client} clientExercise={clientExercise} removeFromClientExercise={removeFromClientExercise} clientDiet={clientDiet} removeFromClientDiet={removeFromClientDiet} clientSupplement={clientSupplement} removeFromClientSupplement={removeFromClientSupplement}/>} />
             <Route path='/admin' element={<Admin />} />
             <Route exact path="/adminclients" element={<Client/>}></Route>
             <Route exact path="/adminequipments" element={<Equipment />}></Route>
             <Route path="/admintrainers" element={<TrainersAdmin />}></Route>
             <Route exact path="/diet" element={<ClientDiet addToClientDiet={addToClientDiet}/>}></Route>
             <Route exact path="/exercise" element={<Exercise addToClientExercise={addToClientExercise}/>}></Route> 
-            <Route exact path="/supplements" element={<Supplements />}></Route> 
+            <Route exact path="/supplements" element={<Supplements addToClientSupplement={addToClientSupplement}/>}></Route> 
 
 
           </Routes>
