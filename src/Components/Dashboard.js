@@ -54,9 +54,7 @@ const Dashboard = ({ client, clientExercise, removeFromClientExercise, clientDie
             <h2>{name}</h2>
             <p className="about-client">
               {" "}
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam,quis nostrud exercitation ullamco ."
+             Welcome {name} you're are goal-getter who pushes yourself to work harder and get stronger every day. Your dedication inspires us, and we wanted to let you know just how much we value you.Enjoy your workout!
             </p>
           </div>
         </div>

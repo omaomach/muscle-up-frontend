@@ -1,12 +1,10 @@
 # 
 <h1 align="center">MuscleUp</h1>
 
-<!-- <p align="center"><img src="https://socialify.git.ci/Aimkeys-Sir/online-comm-frontend/image?descriptionEditable=This%20application%20can%20be%20used%20to%20access%20different%20varieties%20of%20online%20shops%20all%20under%20one%20roof%2C%20helping%20the%20customer%20for%20esier%20comparison%20and%20location%20of%20an%20item&font=Source%20Code%20Pro&language=1&name=1&pattern=Circuit%20Board&stargazers=1&theme=Light"></p> -->
+
 
 This application can be used to manage a gym center.The owner who is considered as the admin can track his trainers,equipments and clients enrolled in the gym.Clients are able to access workouts,diets and details about their personal trainer.The user can be able to view the landing page and see what the gym offers.
 
-
-<!-- <p align="center"><img src="https://img.shields.io/github/issues/Aimkeys-Sir/online-comm-frontend" alt="shields"><img src="https://img.shields.io/github/forks/Aimkeys-Sir/online-comm-frontend" alt="shields"><img src="https://img.shields.io/github/stars/Aimkeys-Sir/online-comm-frontend" alt="shields"><img src="https://img.shields.io/github/license/Aimkeys-Sir/online-comm-frontend" alt="shields"></p> -->
 
 <h2>Contributed by;</h2>
 <h3>Caleb Muthiira</h3>
@@ -17,13 +15,13 @@ This application can be used to manage a gym center.The owner who is considered 
 
 
 
-<h2>🚀 Demo</h2>
+<h2>🚀 Demo Link</h2>
 
-[https:](https:)
+[https:](https://sage-lebkuchen-3d3740.netlify.app/)
 
 <h2>Project Screenshots:</h2>
 
-<p align="center"><img src="https://github.com/omaomach/muscle-up-frontend/blob/main/Screenshot%20from%202022-11-25%2015-24-58.png?raw=true"></p>
+<p align="center"><img src="![landingpagemuscleUp](https://user-images.githubusercontent.com/95272763/213248253-8ff458e2-2ae8-4df2-a04d-2f315be0e633.png)"></p>
 
 <h2>🧐 Features</h2>
 
