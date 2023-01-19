@@ -9,9 +9,10 @@ export default function NavBarClient() {
     <div className="nav-admin">
     <div className="cli">
       <NavLink className="adm-links" style={{ textDecoration: "none" }} to="/dashboard">Dashboard</NavLink>
-      <NavLink className="adm-links" style={{ textDecoration: "none" }} to="/diet">Diet</NavLink>
-      <NavLink className="adm-links"style={{ textDecoration: "none" }} to="/exercise">Exercise</NavLink>
+      <NavLink className="adm-links" style={{ textDecoration: "none" }} to="/diet">Diets</NavLink>
+      <NavLink className="adm-links"style={{ textDecoration: "none" }} to="/exercise">Exercises</NavLink>
       <NavLink className="adm-links"style={{ textDecoration: "none" }} to="/supplements">Supplements</NavLink>
+      {/* <NavLink className="adm-links" style={{textDecoration: "none" }} to="/reviews">Review Gym</NavLink> */}
 
     </div>
   </div>

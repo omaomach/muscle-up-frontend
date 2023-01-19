@@ -109,14 +109,12 @@ function SignUp({ setClient }) {
                 required
                 onChange={(e) => setTarget_Weight(e.target.value)}
               />
-              <input
-                type="text"
-                id="level"
-                className="level"
-                placeholder="Your Gym Level"
-                required
-                onChange={(e) => setLevel(e.target.value)}
-              />
+              <select id="level" className="level" value={level} onChange={(e) => setLevel(e.target.value)} required>
+                <option value={0}>Select Gym Level</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Expert">Expert</option>
+              </select>
               <input
                 type="password"
                 id="password"
