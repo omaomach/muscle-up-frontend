@@ -28,7 +28,12 @@
     height: 150px;
     animation: bounceInLeft;
     animation-duration: 2s;
+    align-items: center;
 }
+/* .dash-about h2 {
+    text-align: center;
+    align-items: center;
+} */
 
 .client-status{
     display:flex;
