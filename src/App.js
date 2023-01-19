@@ -18,6 +18,7 @@ import ClientDiet from './Components/ClientDiet';
 import Exercise from './Components/Exercise';
 import Supplements from './Components/Supplements';
 import NewTrainer from './Components/admin/NewTrainer';
+import Reviews from './Components/Reviews';
 
 function App() {
   const [trainers, setTrainers] = useState([]);
@@ -120,7 +121,7 @@ function App() {
             <Route exact path="/diet" element={<ClientDiet addToClientDiet={addToClientDiet}/>}></Route>
             <Route exact path="/exercise" element={<Exercise addToClientExercise={addToClientExercise}/>}></Route> 
             <Route exact path="/supplements" element={<Supplements addToClientSupplement={addToClientSupplement}/>}></Route> 
-
+            <Route exact path='/reviews' element={<Reviews />}></Route>
           </Routes>
           <Footer/>
           {/* <Dashboard/> */}

@@ -62,8 +62,8 @@ const Dashboard = ({ client, clientExercise, removeFromClientExercise, clientDie
         <div className="details-container">
           <div className="stats">
             <div className="client-status">
-              <li>Weight:{weight}</li>
-              <li>Level:{level}</li>
+              <li>Weight: {weight}</li>
+              <li>Level: {level}</li>
             </div>
             <div className="target-weight">
               <p>Target Weight: {target_weight}</p>
