@@ -5,12 +5,11 @@
 
 This application can be used to manage a gym center.The owner who is considered as the admin can track his trainers,equipments and clients enrolled in the gym.Clients are able to access workouts,diets and details about their personal trainer.The user can be able to view the landing page and see what the gym offers.
 
-
 <h2>Contributed by;</h2>
+<h3>Joash Omao Machoka</h3>
 <h3>Caleb Muthiira</h3>
 <h3>Grace Kyalo</h3>
 <h3>Lilian Wangechi</h3>
-<h3>Omao Machoka</h3>
 <h3>Roy Kiplagat</h3>
 
 
